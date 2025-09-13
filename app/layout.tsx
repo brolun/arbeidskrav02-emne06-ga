@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Link from "next/link";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -25,9 +26,20 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen grid grid-rows-[auto_1fr_auto]`}
       >
+        <header>
+          <nav className="flex justify-center gap-5.5">
+            <Link href="/">Hjem</Link>
+            <Link href="/faginnhold">Faginnhold</Link>
+            <Link href="/oppgaver">Oppgaver</Link>
+          </nav>
+        </header>
         {children}
+        <footer className="text-center">
+          <p>© 2025 The Wizard of the Web</p>
+          <p>Created by Colleen, Roman, and Luna</p>
+        </footer>
       </body>
     </html>
   );
