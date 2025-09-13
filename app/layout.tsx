@@ -35,7 +35,7 @@ export default function RootLayout({
             <Link href="/oppgaver">Oppgaver</Link>
           </nav>
         </header>
-        {children}
+        <main className="px-4 md:px-8 max-w-4xl py-8">{children}</main>
         <footer className="text-center">
           <p>© 2025 The Wizard of the Web</p>
           <p>Created by Colleen, Roman, and Luna</p>
