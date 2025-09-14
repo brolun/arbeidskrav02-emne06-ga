@@ -1,3 +1,7 @@
+export const metadata = {
+  title: "The Wizard of Web | Emne02",
+};
+
 export default function Emne02() {
   return (
     <>
