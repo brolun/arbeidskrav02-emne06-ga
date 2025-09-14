@@ -29,15 +29,18 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen grid grid-rows-[auto_1fr_auto]`}
       >
         <header>
-          <nav className="flex justify-center gap-5.5">
+          <h1 className="text-center text-4xl font-semibold py-6">
+            The Wizard of Web
+          </h1>
+          <nav className="flex justify-center gap-6 border-b border-t text-l py-4">
             <Link href="/">Hjem</Link>
             <Link href="/faginnhold">Faginnhold</Link>
             <Link href="/oppgaver">Oppgaver</Link>
           </nav>
         </header>
-        <main className="px-4 md:px-8 max-w-4xl py-8">{children}</main>
+        <main className="px-4 md:px-8 py-8 mx-auto">{children}</main>
         <footer className="text-center">
-          <p>© 2025 The Wizard of the Web</p>
+          <p>© 2025 The Wizard of Web</p>
           <p>Created by Colleen, Roman, and Luna</p>
         </footer>
       </body>

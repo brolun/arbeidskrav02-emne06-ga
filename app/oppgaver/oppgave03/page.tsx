@@ -1,3 +1,7 @@
+export const metadata = {
+  title: "The Wizard of Web | Oppgave03",
+};
+
 export default function Oppgave03() {
   return (
     <>

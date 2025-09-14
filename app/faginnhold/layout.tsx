@@ -1,16 +1,17 @@
-import Link from "next/link";
-import React from "react";
+"use client";
+import { ReactNode } from "react";
+import SidebarLayout from "../components/SidebarLayout";
 
-export default function Layout({ children }: { children: React.ReactNode }) {
+const links = [
+  { href: "/faginnhold/emne01", label: "Emne 01" },
+  { href: "/faginnhold/emne02", label: "Emne 02" },
+  { href: "/faginnhold/emne03", label: "Emne 03" },
+];
+
+export default function Layout({ children }: { children: ReactNode }) {
   return (
-    <>
-      <h1>Faginnhold</h1>
-      <nav className="content-nav">
-        <Link href="/faginnhold/emne01">Emne 01</Link>
-        <Link href="/faginnhold/emne02">Emne 02</Link>
-        <Link href="/faginnhold/emne03">Emne 03</Link>
-      </nav>
+    <SidebarLayout heading="Faginnhold" links={links} basePath="/faginnhold">
       {children}
-    </>
+    </SidebarLayout>
   );
 }
