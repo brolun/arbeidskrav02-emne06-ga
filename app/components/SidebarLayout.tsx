@@ -28,7 +28,7 @@ export default function SidebarLayout({
     return (
       <>
         <h2 className="text-center">{heading}</h2>
-        <nav className="flex gap-4 mt-0 mb-4 text-sm">
+        <nav className="flex gap-4 mt-0 mb-4 text-sm justify-center">
           {links.map((link) => (
             <Link key={link.href} href={link.href}>
               {link.label}
