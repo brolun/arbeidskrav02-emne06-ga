@@ -27,7 +27,7 @@ export default function SidebarLayout({
   if (isRoot) {
     return (
       <>
-        <h2 className="text-3xl font-semibold">{heading}</h2>
+        <h2>{heading}</h2>
         <nav className="flex gap-4 mt-0 mb-4 text-sm">
           {links.map((link) => (
             <Link key={link.href} href={link.href}>
