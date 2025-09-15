@@ -27,7 +27,7 @@ export default function SidebarLayout({
   if (isRoot) {
     return (
       <>
-        <h2>{heading}</h2>
+        <h2 className="text-center">{heading}</h2>
         <nav className="flex gap-4 mt-0 mb-4 text-sm">
           {links.map((link) => (
             <Link key={link.href} href={link.href}>
@@ -41,8 +41,8 @@ export default function SidebarLayout({
   }
 
   return (
-    <div className="flex gap-8">
-      <aside className="min-w-[140px] mt-6 border-r pr-4">
+    <div className="grid md:grid-cols-[10rem_1fr] gap-8 w-full">
+      <aside className="hidden md:block mt-6 border-r pr-4">
         <nav className="flex flex-col gap-2">
           <Link
             href={basePath}
@@ -57,7 +57,7 @@ export default function SidebarLayout({
           ))}
         </nav>
       </aside>
-      <article className="flex-1">{children}</article>
+      <article className="min-w-0">{children}</article>
     </div>
   );
 }
