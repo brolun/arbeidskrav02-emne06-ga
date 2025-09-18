@@ -5,7 +5,7 @@ export const metadata = {
 export default function Emne01() {
   return (
     <>
-      <h2 className="text-base mt-0">Emne 01: Introduksjon til HTML og CSS</h2>
+      <h2 className="text-base mt-0">TypeScript</h2>
     </>
   );
 }
