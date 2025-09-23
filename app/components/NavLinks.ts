@@ -4,9 +4,12 @@ export const navLinks = [
     href: "/faginnhold",
     label: "Faginnhold",
     children: [
-      { href: "/faginnhold/emne01", label: "Emne 01" },
-      { href: "/faginnhold/emne02", label: "Emne 02" },
-      { href: "/faginnhold/emne03", label: "Emne 03" },
+      { href: "/faginnhold/emne03", label: "Semantisk HTML" },
+      { href: "/faginnhold/emne04", label: "JavaScript" },
+      { href: "/faginnhold/emne01", label: "TypeScript" },
+      { href: "/faginnhold/emne05", label: "React" },
+      { href: "/faginnhold/emne02", label: "Zustand" },
+      { href: "/faginnhold/emne06", label: "API" },
     ],
   },
   {
@@ -21,5 +24,7 @@ export const navLinks = [
 ];
 
 // For SideBarLayout
-export const faginnholdLinks = navLinks.find(l => l.href === "/faginnhold")?.children || [];
-export const oppgaverLinks = navLinks.find(l => l.href === "/oppgaver")?.children || [];
+export const faginnholdLinks =
+  navLinks.find((l) => l.href === "/faginnhold")?.children || [];
+export const oppgaverLinks =
+  navLinks.find((l) => l.href === "/oppgaver")?.children || [];

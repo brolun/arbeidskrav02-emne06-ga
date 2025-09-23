@@ -5,17 +5,7 @@ import Link from "next/link";
 export default function Page() {
   const sections = [
     {
-      title: "TypeScript",
-      desc: "Legger til typer i JavaScript for tryggere kode: objekter, unioner, generics.",
-      link: "/faginnhold/emne01",
-    },
-    {
-      title: "Zustand",
-      desc: "Et lettvekts verktøy for global tilstand – del data mellom komponenter enkelt.",
-      link: "/faginnhold/emne02",
-    },
-    {
-      title: "HTML & CSS",
+      title: "Semantisk HTML + CSS",
       desc: "Bygger grunnstrukturen (HTML) og utseendet (CSS) til nettsider, med semantikk.",
       link: "/faginnhold/emne03",
     },
@@ -24,10 +14,20 @@ export default function Page() {
       desc: "Gir liv til nettsider: logikk, hendelser, lister, interaktive elementer.",
       link: "/faginnhold/emne04",
     },
-        {
+    {
+      title: "TypeScript",
+      desc: "Legger til typer i JavaScript for tryggere kode: objekter, unioner, generics.",
+      link: "/faginnhold/emne01",
+    },
+    {
       title: "React",
       desc: "Hvordan lage komponenter, bruke props, state, hendelser og hooks som useEffect.",
       link: "/faginnhold/emne05",
+    },
+    {
+      title: "Zustand",
+      desc: "Et lettvekts verktøy for global tilstand – del data mellom komponenter enkelt.",
+      link: "/faginnhold/emne02",
     },
     {
       title: "API",
@@ -40,8 +40,8 @@ export default function Page() {
     <main className="max-w-4xl mx-auto p-6 space-y-8">
       <section className="space-y-4 text-center">
         <p className="text-gray-300">
-          Her får du en oversikt over hva du kan lære i de ulike seksjonene. Klikk deg
-          videre for eksempler og forklaringer.
+          Her får du en oversikt over hva du kan lære i de ulike seksjonene.
+          Klikk deg videre for eksempler og forklaringer.
         </p>
       </section>
 
