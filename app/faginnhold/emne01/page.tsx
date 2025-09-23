@@ -48,6 +48,30 @@ const admins = users.filter(u => u.role === "admin"); // type-sjekket ved byggin
     <main className="max-w-3xl mx-auto p-6 space-y-6">
       <h1 className="text-2xl font-bold">TypeScript</h1>
 
+      <section className="space-y-4">
+  <p>
+    <strong>TypeScript</strong> er JavaScript med <strong>typer</strong>. Typene hjelper deg
+    å oppdage feil mens du koder (før siden kjøres), og gjør koden mer forutsigbar og lett å
+    vedlikeholde.
+  </p>
+  <ul className="list-disc list-inside">
+    <li>
+      <strong>Typer for objekter</strong> - f.eks. <code>User</code> med <code>id</code>,{" "}
+      <code>name</code> og valgfri <code>role</code>.
+    </li>
+    <li>
+      <strong>Union-typer</strong> - avgrenser verdier (f.eks. <code>"admin" | "editor" | "viewer"</code>).
+    </li>
+    <li>
+      <strong>Generics</strong> - gjenbrukbare funksjoner med typesikkerhet (f.eks.{" "}
+      <code>pickBy&lt;T, K&gt;</code>).
+    </li>
+    <li>
+      <strong>Type-sjekk</strong> skjer under utvikling/bygging - i runtime oppfører alt seg som vanlig JS.
+    </li>
+  </ul>
+</section>
+
       <button
         type="button"
         onClick={() => setShowExample((v) => !v)}
