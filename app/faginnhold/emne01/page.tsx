@@ -1,11 +1,9 @@
-export const metadata = {
-  title: "The Wizard of Web | Emne01",
-};
+"use client";
 
-export default function Emne01() {
+export default function Page() {
   return (
-    <>
-      <h2 className="text-base mt-0">TypeScript</h2>
-    </>
+    <main className="max-w-3xl mx-auto p-6 space-y-6">
+      <h1 className="text-2xl font-bold">TypeScript</h1>
+    </main>
   );
 }
