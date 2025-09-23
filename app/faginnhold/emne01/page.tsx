@@ -7,3 +7,5 @@ export default function Page() {
     </main>
   );
 }
+
+type User = {id: number; name: string; role?: "admin" | "editor"  | "viewer" };
