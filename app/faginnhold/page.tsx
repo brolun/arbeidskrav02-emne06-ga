@@ -7,32 +7,32 @@ export default function Page() {
     {
       title: "Semantisk HTML + CSS",
       desc: "Bygger grunnstrukturen (HTML) og utseendet (CSS) til nettsider, med semantikk.",
-      link: "/faginnhold/emne03",
+      link: "/faginnhold/sematiskHTML",
     },
     {
       title: "JavaScript",
       desc: "Gir liv til nettsider: logikk, hendelser, lister, interaktive elementer.",
-      link: "/faginnhold/emne04",
+      link: "/faginnhold/javascript",
     },
     {
       title: "TypeScript",
       desc: "Legger til typer i JavaScript for tryggere kode: objekter, unioner, generics.",
-      link: "/faginnhold/emne01",
+      link: "/faginnhold/typescript",
     },
     {
       title: "React",
       desc: "Hvordan lage komponenter, bruke props, state, hendelser og hooks som useEffect.",
-      link: "/faginnhold/emne05",
+      link: "/faginnhold/react",
     },
     {
       title: "Zustand",
       desc: "Et lettvekts verktøy for global tilstand – del data mellom komponenter enkelt.",
-      link: "/faginnhold/emne02",
+      link: "/faginnhold/zustand",
     },
     {
       title: "API",
       desc: "Hvordan hente og sende data til andre tjenester ved hjelp av fetch og REST-API.",
-      link: "/faginnhold/emne06",
+      link: "/faginnhold/api",
     },
   ];
 
