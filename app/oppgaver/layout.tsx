@@ -6,7 +6,7 @@ import { oppgaverLinks } from "../components/NavLinks";
 export default function Layout({ children }: { children: ReactNode }) {
   return (
     <SidebarLayout
-      heading="Oppgaver"
+      heading="Quiz"
       links={oppgaverLinks}
       basePath="/oppgaver"
     >
