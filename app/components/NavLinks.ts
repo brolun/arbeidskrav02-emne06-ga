@@ -4,12 +4,12 @@ export const navLinks = [
     href: "/faginnhold",
     label: "Faginnhold",
     children: [
-      { href: "/faginnhold/emne03", label: "Semantisk HTML" },
-      { href: "/faginnhold/emne04", label: "JavaScript" },
-      { href: "/faginnhold/emne01", label: "TypeScript" },
-      { href: "/faginnhold/emne05", label: "React" },
-      { href: "/faginnhold/emne02", label: "Zustand" },
-      { href: "/faginnhold/emne06", label: "API" },
+      { href: "/faginnhold/sematiskHTML", label: "Semantisk HTML" },
+      { href: "/faginnhold/javascript", label: "JavaScript" },
+      { href: "/faginnhold/typescript", label: "TypeScript" },
+      { href: "/faginnhold/react", label: "React" },
+      { href: "/faginnhold/zustand", label: "Zustand" },
+      { href: "/faginnhold/api", label: "API" },
     ],
   },
   {
