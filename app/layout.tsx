@@ -68,7 +68,7 @@ export default function RootLayout({
         </main>
         <footer className="text-center">
           <p>© 2025 The Wizard of Web</p>
-          <p>Created by Colleen, Roman, and Luna</p>
+          <p>Design og innhold av Colleen, Roman, og Luna</p>
         </footer>
       </body>
     </html>
