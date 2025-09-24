@@ -9,18 +9,21 @@ function pickBy<T extends object, K extends keyof T>(
   keys: K[]
 ): Pick<T, K> {
   const out = {} as Pick<T, K>;
-  for (const k of keys) (out as any)[k] = obj[k];
+  for (const k of keys) out[k] = obj[k];
   return out;
 }
 
 export default function Page() {
   const [showExample, setShowExample] = useState(false);
 
-  const users: User[] = [
-    { id: 1, name: "Stine", role: "admin" },
-    { id: 2, name: "Bjørn", role: "editor" },
-    { id: 3, name: "Aurora" },
-  ];
+  const users: User[] = useMemo(
+    () => [
+      { id: 1, name: "Stine", role: "admin" },
+      { id: 2, name: "Bjørn", role: "editor" },
+      { id: 3, name: "Aurora" },
+    ],
+    []
+  );
   const admins = useMemo(
     () => users.filter((u) => u.role === "admin"),
     [users]
