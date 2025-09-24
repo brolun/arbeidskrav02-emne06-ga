@@ -1,6 +1,6 @@
 export const faginnholdChildren = [
  {
-        href: "/faginnhold/sematiskHTML",
+        href: "/faginnhold/semantiskHTML",
         label: "Semantisk HTML",
         desc: "Bygger grunnstrukturen (HTML) og utseendet (CSS) til nettsider, med semantikk.",
       },
