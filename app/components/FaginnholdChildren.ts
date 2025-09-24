@@ -1,0 +1,27 @@
+export const faginnholdChildren = [
+ {
+        href: "/faginnhold/sematiskHTML",
+        label: "Semantisk HTML",
+        desc: "Bygger grunnstrukturen (HTML) og utseendet (CSS) til nettsider, med semantikk.",
+      },
+      { href: "/faginnhold/javascript", 
+        label: "JavaScript", 
+        desc: "Gir liv til nettsider: logikk, hendelser, lister, interaktive elementer." 
+      },
+      { href: "/faginnhold/typescript", 
+        label: "TypeScript",
+        desc: "Legger til typer i JavaScript for tryggere kode: objekter, unioner, generics.",
+      },
+      { href: "/faginnhold/react", 
+        label: "React",
+        desc: "Hvordan lage komponenter, bruke props, state, hendelser og hooks som useEffect.",
+      },
+      { href: "/faginnhold/zustand", 
+        label: "Zustand",
+        desc: "Et lettvekts verktøy for global tilstand – del data mellom komponenter enkelt.",
+      },
+      { href: "/faginnhold/api", 
+        label: "API",
+        desc: "Hvordan hente og sende data til andre tjenester ved hjelp av fetch og REST-API.",
+      },
+];
