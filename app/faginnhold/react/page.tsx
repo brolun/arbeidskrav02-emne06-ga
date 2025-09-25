@@ -19,7 +19,7 @@ export default function Page() {
   const users: User[] = [
     { id: 1, name: "Stine", role: "admin" },
     { id: 2, name: "Bjørn", role: "editor" },
-    { id: 3, name: "Aurora" },
+    { id: 3, name: "Aurora", role: "admin" },
   ];
   const admins = useMemo(
     () => users.filter((u) => u.role === "admin"),
