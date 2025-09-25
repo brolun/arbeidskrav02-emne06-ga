@@ -20,7 +20,7 @@ export default function Page() {
     () => [
       { id: 1, name: "Stine", role: "admin" },
       { id: 2, name: "Bjørn", role: "editor" },
-      { id: 3, name: "Aurora" },
+      { id: 3, name: "Aurora", role:"admin" },
     ],
     []
   );
