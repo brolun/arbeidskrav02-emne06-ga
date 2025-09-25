@@ -9,8 +9,8 @@ export default function ShowQuiz() {
          <main>
     {
     myQuestions.map(question => <article key={question.id}>
-        <h1>Question {question.id}:</h1>
-        <h2>{question.question}</h2>
+        <h2>Question {question.id}:</h2>
+        <h3>{question.question}</h3>
             
                 {question.options.map(option => 
             <ul key={option.optionId}>
