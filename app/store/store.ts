@@ -146,11 +146,10 @@ export const useQuizStore = create<useQuizStore>()(
         { optionId: 48, letter: "D", answer: "Å lagre filer på brukerens PC" }
       ],
       correctAnswer: "B"
-    }],
-    {
-      name: 'answer-storage'
-    },
-},
-),
+    }
+  ],
+}),
+{ name: "answer-storage" }
 )
+);
 
