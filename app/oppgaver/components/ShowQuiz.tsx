@@ -7,13 +7,19 @@ export default function ShowQuiz() {
 
     return (
          <main>
-    {myQuestions.map(question => <article>
-        <h1 key="question.id">Question {question.id}:</h1>
+    {
+    myQuestions.map(question => <article key={question.id}>
+        <h1>Question {question.id}:</h1>
         <h2>{question.question}</h2>
-            <ul>
-                <li>{question.options}</li>
-            </ul>
-     </article>)}
+            
+                {question.options.map(option => 
+            <ul key={option.optionId}>
+                <li>{option.letter}. {option.answer}</li>
+            </ul> 
+            )}
+            <input type="letter" placeholder="Type answer here"></input>
+     </article>
+    )}
     </main>
     )
 }

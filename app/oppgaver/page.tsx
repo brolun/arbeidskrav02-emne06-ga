@@ -1,5 +1,3 @@
-
-
 import ShowQuiz from "./components/ShowQuiz";
 
 
@@ -10,7 +8,10 @@ export const metadata = {
 export default function Quiz() {
   return (
     <main>
+      <form>
       <ShowQuiz/>
+      <button type="submit">Submit your answers!</button>
+      </form>
      </main>
   );
 }
