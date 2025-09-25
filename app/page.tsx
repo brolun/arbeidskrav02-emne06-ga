@@ -1,10 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
 
-export const metadata = {
-  title: "The Wizard of Web",
-};
-
 export default function Home() {
   return (
     <>
@@ -13,12 +9,12 @@ export default function Home() {
           <p className="mb-10 text-4xl font-semibold">
             Lær å mestre webens magi — fra nybegynner til trollmann.
           </p>
-        <Link
-  href="/faginnhold"
-  className="inline-block px-6 py-3 bg-blue-600 text-white rounded-lg shadow hover:bg-blue-500 hover:shadow-lg transition"
->
-  Start din reise her
-</Link>
+          <Link
+            href="/faginnhold"
+            className="inline-block px-6 py-3 bg-blue-600 text-white rounded-lg shadow hover:bg-blue-500 hover:shadow-lg transition"
+          >
+            Start din reise her
+          </Link>
         </div>
         <Image
           src="/wizard.png"
