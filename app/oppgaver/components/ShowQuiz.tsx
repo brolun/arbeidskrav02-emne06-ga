@@ -1,9 +1,12 @@
 "use client"
 
+
+
 import { useQuizStore } from "@/app/store/store";
 
 export default function ShowQuiz() {
     const myQuestions = useQuizStore((state) => state.myQuestions);
+    const setAnswer = useQuizStore((state) => state.setAnswer);
 
     return (
          <main>
@@ -17,7 +20,11 @@ export default function ShowQuiz() {
                 <li>{option.letter}. {option.answer}</li>
             </ul> 
             )}
-            <input type="letter" placeholder="Type answer here" onChange={setAnswer(event)} ></input>
+            const questionID = question.id
+            <input type="text" 
+            placeholder="Type answer here" 
+            //(evt) lager en funkjson som tar imot eventet
+            onChange={(evt) => setAnswer(question.id, evt.target.value)} ></input>
      </article>
     )}
     </main>

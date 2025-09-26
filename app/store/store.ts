@@ -156,7 +156,7 @@ UserAnswers: {}, //second property of store object
 setAnswer: (questionID: number, answer: string) => void ({ 
   UserAnswers: state.UserAnswers.map((answer)) =>
    {...answer, questionID === myQuestions.id, answer === userInput  }
-  const answer = event.target.value
+  const answer = evt.target.value
 })
 
 }), //end of store object
