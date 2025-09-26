@@ -19,7 +19,7 @@ type UserAnswers = { [questionId: number] : string}
 export const useQuizStore = create<useQuizStore>()(
   persist(
     (set) => ({
-    myQuestions: [{
+    myQuestions: [{  //første property of store object
       id: 1,
       question: "Hva betyr semantisk HTML?",
       options: [
@@ -152,10 +152,13 @@ export const useQuizStore = create<useQuizStore>()(
       correctAnswer: "B"
     }
   ],
-}),
+UserAnswers: {}, //second property of store object  
+}), //end of store object
 { name: "answer-storage" }
 )
 );
+
+UserAnswers : {}
 
 //Legger til hvert bruker svar som den får fra setAnswer,
 //og lager sitt eget object hvor den kobler svaret opp
