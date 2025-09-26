@@ -10,11 +10,10 @@ type Question = {
 
 type useQuizStore = {
     myQuestions: Question[];
+    UserAnswers:{ [questionId: number] : string}
 }
-
-//Brackets gjør at property can endre seg
-//Lager et objekt som tar imot svar som f.eks {1: "A"}
-type UserAnswers = { [questionId: number] : string}
+//for UserAnswers: Brackets gjør at property can endre seg
+//UserAnswers lager et objekt som tar imot svar som f.eks {1: "A"}
 
 export const useQuizStore = create<useQuizStore>()(
   persist(
@@ -152,20 +151,22 @@ export const useQuizStore = create<useQuizStore>()(
       correctAnswer: "B"
     }
   ],
-UserAnswers: {}, //second property of store object  
+UserAnswers: {}, //second property of store object 
+//void betyr at funksjonen ikke returnerer noe 
+setAnswer: (questionID: number, answer: string) => void ({ 
+  UserAnswers: state.UserAnswers.map((answer)) =>
+   {...answer, questionID === myQuestions.id, answer === userInput  }
+  const answer = event.target.value
+})
+
 }), //end of store object
 { name: "answer-storage" }
 )
 );
 
-UserAnswers : {}
-
 //Legger til hvert bruker svar som den får fra setAnswer,
 //og lager sitt eget object hvor den kobler svaret opp
-//spørsmål id'en.
-userAnswers: (id) => {
-  set((state) => ({
+//spørsmål id'en
+
   
-  }))
-}
 

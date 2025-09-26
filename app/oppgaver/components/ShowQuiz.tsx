@@ -17,7 +17,7 @@ export default function ShowQuiz() {
                 <li>{option.letter}. {option.answer}</li>
             </ul> 
             )}
-            <input type="letter" placeholder="Type answer here"></input>
+            <input type="letter" placeholder="Type answer here" onChange={setAnswer(event)} ></input>
      </article>
     )}
     </main>
