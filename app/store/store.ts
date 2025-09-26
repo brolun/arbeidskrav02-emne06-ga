@@ -153,11 +153,11 @@ export const useQuizStore = create<useQuizStore>()(
   ],
 UserAnswers: {}, //second property of store object 
 //void betyr at funksjonen ikke returnerer noe 
-setAnswer: (questionID: number, answer: string) => void ({ 
-  UserAnswers: state.UserAnswers.map((answer)) =>
-   {...answer, questionID === myQuestions.id, answer === userInput  }
-  const answer = evt.target.value
-})
+setAnswer: (questionID: number, answer: string) => set((state) =>
+  UserAnswers: {...state.UserAnswers, [questionID]: answer}
+})) 
+ 
+
 
 }), //end of store object
 { name: "answer-storage" }
