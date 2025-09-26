@@ -10,7 +10,7 @@ export default function Quiz() {
     <main>
       <form>
       <ShowQuiz/>
-      <button type="submit">Submit your answers!</button>
+      <button type="submit">Submit your answers here!</button>
       </form>
      </main>
   );

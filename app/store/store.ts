@@ -12,6 +12,10 @@ type useQuizStore = {
     myQuestions: Question[];
 }
 
+//Brackets gjør at property can endre seg
+//Lager et objekt som tar imot svar som f.eks {1: "A"}
+type UserAnswers = { [questionId: number] : string}
+
 export const useQuizStore = create<useQuizStore>()(
   persist(
     (set) => ({
@@ -152,4 +156,13 @@ export const useQuizStore = create<useQuizStore>()(
 { name: "answer-storage" }
 )
 );
+
+//Legger til hvert bruker svar som den får fra setAnswer,
+//og lager sitt eget object hvor den kobler svaret opp
+//spørsmål id'en.
+userAnswers: (id) => {
+  set((state) => ({
+  
+  }))
+}
 
