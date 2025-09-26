@@ -30,9 +30,9 @@ export default function Page() {
 </footer>`;
 
   return (
-    <main className="max-w-3xl mx-auto p-6 space-y-6">
+    <div className="max-w-3xl mx-auto p-6 space-y-6">
       <section className="space-y-4">
-        <h1 className="text-2xl font-bold">Semantisk HTML</h1>
+        <h2 className="text-2xl font-bold">Semantisk HTML</h2>
         <p>
           <strong>Semantisk HTML</strong> betyr at vi bruker riktige tagger for
           riktig type innhold. Det gjør koden mer forståelig for både mennesker
@@ -113,6 +113,6 @@ export default function Page() {
           </div>
         )}
       </section>
-    </main>
+    </div>
   );
 }

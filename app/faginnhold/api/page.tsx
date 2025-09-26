@@ -49,14 +49,13 @@ async function hentHpKarakterer() {
   }
 
   return (
-    <main className="max-w-3xl mx-auto p-6 space-y-6">
+    <div className="max-w-3xl mx-auto p-6 space-y-6">
       <section className="space-y-4">
-        <h1 className="text-2xl font-bold">API</h1>
+        <h2 className="text-2xl font-bold">API</h2>
         <p>
           Et <strong>API (Application Programming Interface)</strong> er et
-          <strong> grensesnitt</strong> som gjør at to programmer eller systemer
-          kan
-          <strong> snakke sammen</strong>.
+          <strong>grensesnitt</strong> som gjør at to programmer eller systemer
+          kan <strong>snakke sammen</strong>.
         </p>
         <p>
           Det brukes for å <strong>hente</strong> informasjon (for eksempel en
@@ -67,7 +66,7 @@ async function hentHpKarakterer() {
           I nettleseren brukes ofte <code>fetch</code> for å hente eller sende
           data til et
           <strong> REST-API</strong>. På den måten kan en webside vise oppdatert
-          innhold fra en ekstern tjeneste – som i eksempelet vårt med{" "}
+          innhold fra en ekstern tjeneste – som i eksempelet vårt med
           <strong>Harry Potter-karakterer</strong>.
         </p>
       </section>
@@ -117,6 +116,6 @@ async function hentHpKarakterer() {
           </div>
         )}
       </section>
-    </main>
+    </div>
   );
 }

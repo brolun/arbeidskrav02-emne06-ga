@@ -24,9 +24,9 @@ function handleClick() {
 }`;
 
   return (
-    <main className="max-w-3xl mx-auto p-6 space-y-6">
+    <div className="max-w-3xl mx-auto p-6 space-y-6">
       <section className="space-y-4">
-        <h1 className="text-2xl font-bold">JavaScript</h1>
+        <h2 className="text-2xl font-bold">JavaScript</h2>
         <p>
           <strong>JavaScript</strong> er et programmeringsspråk som gjør
           nettsider <strong>dynamiske</strong> og <strong>interaktive</strong>.
@@ -94,6 +94,6 @@ function handleClick() {
           </div>
         )}
       </section>
-    </main>
+    </div>
   );
 }

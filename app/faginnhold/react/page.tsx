@@ -30,13 +30,13 @@ export default function Page() {
   );
 
   return (
-    <main className="max-w-3xl mx-auto p-6 space-y-6">
+    <div className="max-w-3xl mx-auto p-6 space-y-6">
       <section className="space-y-4">
-        <h1 className="text-2xl font-bold">React</h1>
+        <h2 className="text-2xl font-bold">React</h2>
         <p>
           <strong>React</strong> er et verktøy (et bibliotek) laget i JavaScript
           som hjelper til med å bygge <strong>nettsider og apper</strong> på en
-          måte som gjør dem <strong>raske, oversiktlige</strong> og{" "}
+          måte som gjør dem <strong>raske, oversiktlige</strong> og
           <strong>enkle å videreutvikle</strong>.
         </p>
         <p>
@@ -105,6 +105,6 @@ function pickBy<T extends object, K extends keyof T>(obj: T, keys: K[]): Pick<T,
           </div>
         )}
       </section>
-    </main>
+    </div>
   );
 }

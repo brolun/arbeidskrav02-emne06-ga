@@ -48,9 +48,9 @@ const users: User[] = [
 const admins = users.filter(u => u.role === "admin"); // type-sjekket ved bygging`;
 
   return (
-    <main className="max-w-3xl mx-auto p-6 space-y-6">
+    <div className="max-w-3xl mx-auto p-6 space-y-6">
       <section className="space-y-4">
-        <h1 className="text-2xl font-bold">TypeScript</h1>
+        <h2 className="text-2xl font-bold">TypeScript</h2>
         <p>
           <strong>TypeScript</strong> er JavaScript med <strong>typer</strong>.
           Typene hjelper deg å oppdage feil mens du koder (før siden kjøres), og
@@ -117,6 +117,6 @@ const admins = users.filter(u => u.role === "admin"); // type-sjekket ved byggin
           </div>
         )}
       </section>
-    </main>
+    </div>
   );
 }
