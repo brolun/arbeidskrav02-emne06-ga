@@ -41,8 +41,8 @@ export default function SidebarLayout({
   }
 
   return (
-    <div className="grid md:grid-cols-[10rem_1fr] gap-8 w-full">
-      <aside className="hidden md:block mt-6 border-r pr-4">
+    <div className="grid md:grid-cols-[10rem_1fr] gap-8 w-full text-dark">
+      <aside className="hidden md:block mt-6 border-r boder-dark pr-4">
         <nav className="flex flex-col gap-2">
           <Link
             href={basePath}

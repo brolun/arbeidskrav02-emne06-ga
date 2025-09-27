@@ -64,7 +64,7 @@ export default function Page() {
           type="button"
           onClick={() => setShowExample((v) => !v)}
           aria-expanded={showExample}
-          className="px-4 py-2 rounded-lg font-medium text-white bg-blue-600 hover:bg-blue-500 transition"
+          className="button"
         >
           {showExample ? "Skjul eksempel" : "Eksempel"}
         </button>
@@ -77,7 +77,7 @@ export default function Page() {
             </pre>
 
             <h3>Resultat</h3>
-            <div className="border border-gray-700 rounded-lg p-6 space-y-6 bg-gray-800 text-white">
+            <div className="border border-gray-600 rounded-lg p-6 space-y-6 bg-gray-700 text-white">
               <header className="text-center space-y-1">
                 <h1 className="text-2xl font-bold">Sidens tittel</h1>
                 <p className="text-gray-300">Kort beskrivelse</p>
@@ -100,7 +100,7 @@ export default function Page() {
                   <h2 className="text-xl font-semibold">Artikkel</h2>
                   <p>Hovedinnhold…</p>
                 </article>
-                <aside id="aside" className="bg-gray-700 p-4 rounded-lg">
+                <aside id="aside" className="bg-gray-500 p-4 rounded-lg">
                   <h3>Sidepanel</h3>
                   <p>Lenker, notater…</p>
                 </aside>

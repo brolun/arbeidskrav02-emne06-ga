@@ -65,7 +65,7 @@ function handleClick() {
               </pre>
 
               <h2 className="text-xl font-semibold">Resultat</h2>
-              <div className="bg-gray-800 p-4 rounded-lg space-y-2">
+              <div className="bg-dark p-4 rounded-lg space-y-2">
                 <p>Opprinnelige tall: {numbers.join(", ")}</p>
                 <p>Doblede tall: {doubled.join(", ")}</p>
                 <p>Summen av tallene: {sum}</p>
@@ -81,7 +81,7 @@ function handleClick() {
               </pre>
 
               <h2 className="text-xl font-semibold">Resultat</h2>
-              <div className="bg-gray-800 p-4 rounded-lg space-y-2">
+              <div className="bg-dark p-4 rounded-lg space-y-2">
                 <p>Antall klikk: {clicks}</p>
                 <button
                   onClick={() => setClicks((c) => c + 1)}

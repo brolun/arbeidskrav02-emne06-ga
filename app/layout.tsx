@@ -27,13 +27,13 @@ export default function RootLayout({
   return (
     <html lang="nb">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen grid grid-rows-[auto_1fr_auto]`}
+        className={`${geistSans.variable} ${geistMono.variable} bg-light antialiased min-h-screen grid grid-rows-[auto_1fr_auto]`}
       >
-        <header>
-          <h1 className="text-light text-center text-4xl font-semibold py-6">
+        <header className="bg-dark shadow-md">
+          <h1 className="text-accent text-center text-4xl font-semibold py-2">
             The Wizard of Web
           </h1>
-          <nav className="flex justify-center gap-6 border-b border-t border-muted text-light text-l py-4">
+          <nav className="flex justify-center gap-8 text-light text-l py-4">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
@@ -45,13 +45,10 @@ export default function RootLayout({
             ))}
           </nav>
         </header>
-        <main
-          className="px-4 md:px-8 py-8 mx-auto max-w-5xl w-full"
-          style={{ position: "relative" }}
-        >
+        <main className="px-4 md:px-8 py-8 mx-auto max-w-5xl w-full">
           {children}
         </main>
-        <footer className="text-center text-muted">
+        <footer className="text-center text-dark text-sm mt-10">
           <p>© 2025 The Wizard of Web</p>
           <p>Design og innhold av Colleen, Roman, og Luna</p>
         </footer>
