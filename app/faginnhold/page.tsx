@@ -13,12 +13,10 @@ export default function Page() {
         {faginnholdChildren.map((emne) => (
           <div
             key={emne.href}
-            className="bg-dark space-y-4 p-5 rounded-lg shadow hover:shadow-lg transition flex flex-col justify-between h-full"
+            className="card shadow hover:shadow-lg transition flex flex-col justify-between h-full"
           >
-            <h3 className="text-xl font-semibold mb-3 text-light">
-              {emne.label}
-            </h3>
-            <p className="text-light">{emne.desc}</p>
+            <h3>{emne.label}</h3>
+            <p>{emne.desc}</p>
             <Link href={emne.href} className="button self-start">
               Les mer
             </Link>

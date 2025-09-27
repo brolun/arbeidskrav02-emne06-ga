@@ -48,7 +48,7 @@ h3 {
 }
 
 .card {
-  @apply p-4 rounded-lg space-y-2;
+  @apply p-4 rounded-lg space-y-4;
   background: var(--secondary);
   color: var(--primary);
 }
