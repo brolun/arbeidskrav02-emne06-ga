@@ -153,7 +153,6 @@ export const useQuizStore = create<useQuizStore>()(
     }
   ],
 UserAnswers: {}, //second property of store object 
-hasHydrated: false,
 
 setAnswer: (questionID: number, answer: string) => set((state) => {
   console.log("setAnswer called")
