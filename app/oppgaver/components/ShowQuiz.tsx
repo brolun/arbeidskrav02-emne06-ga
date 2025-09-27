@@ -20,7 +20,6 @@ export default function ShowQuiz() {
                 <li>{option.letter}. {option.answer}</li>
             </ul> 
             )}
-            const questionID = question.id
             <input type="text" 
             placeholder="Type answer here" 
             //(evt) lager en funkjson som tar imot eventet

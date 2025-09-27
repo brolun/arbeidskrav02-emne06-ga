@@ -1,4 +1,4 @@
-import { useQuizStore } from "@/app/store/store";
+/*import { useQuizStore } from "@/app/store/store";
 
 export default function CheckAnswers() {
     const myQuestions = useQuizStore((state) => state.myQuestions);
@@ -6,4 +6,4 @@ export default function CheckAnswers() {
     myQuestions.map(question =>
      userAnswer === question.correctAnswer ? AnswerIsCorrect : AnswerIsIncorrect
     )
-}
+} */

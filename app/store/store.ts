@@ -153,10 +153,15 @@ export const useQuizStore = create<useQuizStore>()(
     }
   ],
 UserAnswers: {}, //second property of store object 
-//void betyr at funksjonen ikke returnerer noe 
-setAnswer: (questionID: number, answer: string) => set((state) => ({
+
+setAnswer: (questionID: number, answer: string) => set((state) => {
+  console.log("setAnswer called")
+  console.log('UserAnswers:', state.UserAnswers);
+  return { UserAnswers: {...state.UserAnswers, [questionID]: answer} };
+})
+/*setAnswer: (questionID: number, answer: string) => set((state) => ({
   UserAnswers: {...state.UserAnswers, [questionID]: answer}
-})) 
+})) */
  
 }), //end of store object
 { name: "answer-storage" }
@@ -166,6 +171,8 @@ setAnswer: (questionID: number, answer: string) => set((state) => ({
 //Legger til hvert bruker svar som den får fra setAnswer,
 //og lager sitt eget object hvor den kobler svaret opp
 //spørsmål id'en
+
+
 
   
 
