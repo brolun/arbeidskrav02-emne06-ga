@@ -14,6 +14,7 @@ export default function ShowQuiz() {
     function resetQuiz (){
         setIsSubmitted(false);
         useQuizStore.getState().clearAnswers();
+        window.scrollTo(0, 0)
     };
 
     useEffect(() => {
@@ -49,7 +50,11 @@ export default function ShowQuiz() {
                     </select>
              </article>
             )}
-            <button type="submit" onClick={() => setIsSubmitted(true)}>Submit your answers here!</button>
+            <button type="submit" onClick={() => {
+                 setIsSubmitted(true);
+                 window.scrollTo(0, 0);
+                }}
+                >Submit your answers here!</button>
         </main>
     )
 }
