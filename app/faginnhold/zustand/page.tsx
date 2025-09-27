@@ -23,7 +23,7 @@ export default function Page() {
 
   return (
     <>
-      <section className="space-y-4">
+      <section className="code-info">
         <h2>Zustand</h2>
         <p>
           <strong>Zustand</strong> er som en liten boks der en app kan lagre
@@ -54,7 +54,7 @@ export default function Page() {
         </p>
       </section>
 
-      <section className="space-y-4">
+      <section className="code-example">
         <button
           type="button"
           onClick={() => setShowExample((v) => !v)}

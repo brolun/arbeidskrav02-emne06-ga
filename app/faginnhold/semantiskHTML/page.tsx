@@ -31,7 +31,7 @@ export default function Page() {
 
   return (
     <>
-      <section className="space-y-4">
+      <section className="code-info">
         <h2>Semantisk HTML</h2>
         <p>
           <strong>Semantisk HTML</strong> betyr at vi bruker riktige tagger for
@@ -59,7 +59,7 @@ export default function Page() {
         </p>
       </section>
 
-      <section className="space-y-4">
+      <section className="code-example">
         <button
           type="button"
           onClick={() => setShowExample((v) => !v)}

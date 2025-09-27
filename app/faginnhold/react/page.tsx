@@ -31,7 +31,7 @@ export default function Page() {
 
   return (
     <>
-      <section className="space-y-4">
+      <section className="code-info">
         <h2>React</h2>
         <p>
           <strong>React</strong> er et verktøy (et bibliotek) laget i JavaScript
@@ -67,7 +67,7 @@ export default function Page() {
         </ul>
       </section>
 
-      <section className="space-y-4">
+      <section className="code-example">
         <button
           type="button"
           onClick={() => setShowExample((v) => !v)}

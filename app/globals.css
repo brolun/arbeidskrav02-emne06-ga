@@ -35,7 +35,7 @@ h2 {
   @apply text-3xl font-semibold mb-8 mt-4;
 }
 h3 {
-  @apply text-2xl font-semibold mb-6 mt-4;
+  @apply text-2xl font-semibold;
 }
 
 .button {
@@ -51,6 +51,13 @@ h3 {
   @apply p-4 rounded-lg space-y-2;
   background: var(--secondary);
   color: var(--primary);
+}
+
+.code-info {
+  @apply space-y-4 mb-7;
+}
+.code-example {
+  @apply space-y-7;
 }
 
 pre {

@@ -50,7 +50,7 @@ async function hentHpKarakterer() {
 
   return (
     <>
-      <section className="space-y-4 mb-6">
+      <section className="code-info">
         <h2>API</h2>
         <p>
           Et <strong>API (Application Programming Interface)</strong> er et{" "}
@@ -71,7 +71,7 @@ async function hentHpKarakterer() {
         </p>
       </section>
 
-      <section className="space-y-4">
+      <section className="code-example">
         <button
           type="button"
           onClick={() => setShowExample((v) => !v)}

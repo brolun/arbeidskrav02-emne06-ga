@@ -25,7 +25,7 @@ function handleClick() {
 
   return (
     <>
-      <section className="space-y-4 mb-6">
+      <section className="code-info">
         <h2>JavaScript</h2>
         <p>
           <strong>JavaScript</strong> er et programmeringsspråk som gjør
@@ -44,7 +44,7 @@ function handleClick() {
         </p>
       </section>
 
-      <section className="space-y-4">
+      <section className="code-example">
         <button
           type="button"
           onClick={() => setShowExample((v) => !v)}

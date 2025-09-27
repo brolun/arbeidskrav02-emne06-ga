@@ -49,7 +49,7 @@ const admins = users.filter(u => u.role === "admin"); // type-sjekket ved byggin
 
   return (
     <>
-      <section className="space-y-4">
+      <section className="code-info">
         <h2>TypeScript</h2>
         <p>
           <strong>TypeScript</strong> er JavaScript med <strong>typer</strong>.
@@ -79,7 +79,7 @@ const admins = users.filter(u => u.role === "admin"); // type-sjekket ved byggin
         </ul>
       </section>
 
-      <section className="space-y-4">
+      <section className="code-example">
         <button
           type="button"
           onClick={() => setShowExample((v) => !v)}
