@@ -20,7 +20,7 @@
 }
 .border-dark {
   border-color: var(--secondary);
-  }
+}
 .bg-accent {
   background: var(--accent);
 }
@@ -45,4 +45,10 @@ h3 {
 }
 .button:hover {
   @apply shadow-lg;
+}
+
+pre {
+  @apply p-4 rounded-lg text-sm whitespace-pre-wrap break-words font-mono;
+  background: var(--secondary);
+  color: var(--primary);
 }

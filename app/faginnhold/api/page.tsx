@@ -84,9 +84,7 @@ async function hentHpKarakterer() {
         {showExample && (
           <div className="space-y-6">
             <h3>Kode (eksempel)</h3>
-            <pre className="bg-gray-900 text-gray-100 p-4 rounded-lg text-sm whitespace-pre-wrap break-words">
-              {snippet}
-            </pre>
+            <pre>{snippet}</pre>
 
             <h3>Resultat</h3>
 

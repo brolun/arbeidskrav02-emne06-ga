@@ -80,7 +80,7 @@ export default function Page() {
         {showExample && (
           <div className="space-y-4">
             <h3>Kode (utdrag)</h3>
-            <pre className="bg-gray-900 text-gray-100 p-4 rounded-lg text-sm whitespace-pre-wrap break-words">
+            <pre>
               {`type User = { id: number; name: string; role?: "admin" | "editor" | "viewer" };
 
 function pickBy<T extends object, K extends keyof T>(obj: T, keys: K[]): Pick<T,K> {

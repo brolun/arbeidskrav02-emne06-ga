@@ -58,9 +58,7 @@ function handleClick() {
           <div className="space-y-8">
             <div className="space-y-4">
               <h3>Kode (eksempel 1: lister)</h3>
-              <pre className="bg-gray-900 text-gray-100 p-4 rounded-lg text-sm whitespace-pre-wrap break-words">
-                {snippet1}
-              </pre>
+              <pre>{snippet1}</pre>
 
               <h3>Resultat</h3>
               <div className="bg-dark p-4 rounded-lg space-y-2">
@@ -72,9 +70,7 @@ function handleClick() {
 
             <div className="space-y-4">
               <h3>Kode (eksempel 2: klikk-teller)</h3>
-              <pre className="bg-gray-900 text-gray-100 p-4 rounded-lg text-sm whitespace-pre-wrap break-words">
-                {snippet2}
-              </pre>
+              <pre>{snippet2}</pre>
 
               <h3>Resultat</h3>
               <div className="bg-dark p-4 rounded-lg space-y-2">

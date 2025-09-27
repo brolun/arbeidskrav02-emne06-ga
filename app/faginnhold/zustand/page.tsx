@@ -71,7 +71,7 @@ export default function Page() {
         {showExample && (
           <div className="space-y-6">
             <h3>Kode (utdrag)</h3>
-            <pre className="bg-gray-900 text-gray-100 p-4 rounded-lg text-sm whitespace-pre-wrap break-words">
+            <pre>
               {`type CounterState = {
   count: number;
   inc: () => void;
