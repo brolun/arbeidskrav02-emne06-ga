@@ -51,7 +51,7 @@ async function hentHpKarakterer() {
   return (
     <div className="max-w-3xl mx-auto p-6 space-y-6">
       <section className="space-y-4">
-        <h2 className="text-2xl font-bold">API</h2>
+        <h2>API</h2>
         <p>
           Et <strong>API (Application Programming Interface)</strong> er et
           <strong>grensesnitt</strong> som gjør at to programmer eller systemer
@@ -83,13 +83,13 @@ async function hentHpKarakterer() {
 
         {showExample && (
           <div className="space-y-6">
-            <h2 className="text-xl font-semibold">Kode (eksempel)</h2>
+            <h3>Kode (eksempel)</h3>
             <pre className="bg-gray-900 text-gray-100 p-4 rounded-lg text-sm whitespace-pre-wrap break-words">
               {snippet}
             </pre>
 
-            <h2 className="text-xl font-semibold">Resultat</h2>
-            <div className="bg-gray-800 text-white p-4 rounded-lg space-y-4">
+            <h3>Resultat</h3>
+
               <button
                 onClick={hentHpKarakterer}
                 disabled={loading}

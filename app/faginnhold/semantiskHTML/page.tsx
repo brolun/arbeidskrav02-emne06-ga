@@ -32,7 +32,7 @@ export default function Page() {
   return (
     <div className="max-w-3xl mx-auto p-6 space-y-6">
       <section className="space-y-4">
-        <h2 className="text-2xl font-bold">Semantisk HTML</h2>
+        <h2>Semantisk HTML</h2>
         <p>
           <strong>Semantisk HTML</strong> betyr at vi bruker riktige tagger for
           riktig type innhold. Det gjør koden mer forståelig for både mennesker
@@ -71,12 +71,12 @@ export default function Page() {
 
         {showExample && (
           <div className="space-y-6">
-            <h2 className="text-xl font-semibold">Kode (utdrag)</h2>
+            <h3>Kode (utdrag)</h3>
             <pre className="bg-gray-900 text-gray-100 p-4 rounded-lg text-sm whitespace-pre-wrap break-words">
               {snippet}
             </pre>
 
-            <h2 className="text-xl font-semibold">Resultat</h2>
+            <h3>Resultat</h3>
             <div className="border border-gray-700 rounded-lg p-6 space-y-6 bg-gray-800 text-white">
               <header className="text-center space-y-1">
                 <h1 className="text-2xl font-bold">Sidens tittel</h1>
@@ -101,7 +101,7 @@ export default function Page() {
                   <p>Hovedinnhold…</p>
                 </article>
                 <aside id="aside" className="bg-gray-700 p-4 rounded-lg">
-                  <h3 className="text-lg font-medium">Sidepanel</h3>
+                  <h3>Sidepanel</h3>
                   <p>Lenker, notater…</p>
                 </aside>
               </main>

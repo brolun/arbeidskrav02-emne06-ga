@@ -32,7 +32,7 @@ export default function Page() {
   return (
     <div className="max-w-3xl mx-auto p-6 space-y-6">
       <section className="space-y-4">
-        <h2 className="text-2xl font-bold">React</h2>
+        <h2>React</h2>
         <p>
           <strong>React</strong> er et verktøy (et bibliotek) laget i JavaScript
           som hjelper til med å bygge <strong>nettsider og apper</strong> på en
@@ -54,7 +54,7 @@ export default function Page() {
           gang.
         </p>
 
-        <h2 className="text-xl font-semibold">Hva brukes det til?</h2>
+        <h2>Hva brukes det til?</h2>
         <ul className="list-disc list-inside">
           <li>
             Å lage <strong>moderne nettsider og apper</strong> (f.eks. bruker
@@ -79,7 +79,7 @@ export default function Page() {
 
         {showExample && (
           <div className="space-y-4">
-            <h3 className="text-lg font-semibold">Kode (utdrag)</h3>
+            <h3>Kode (utdrag)</h3>
             <pre className="bg-gray-900 text-gray-100 p-4 rounded-lg text-sm whitespace-pre-wrap break-words">
               {`type User = { id: number; name: string; role?: "admin" | "editor" | "viewer" };
 
@@ -90,7 +90,7 @@ function pickBy<T extends object, K extends keyof T>(obj: T, keys: K[]): Pick<T,
 }`}
             </pre>
 
-            <h3 className="text-lg font-semibold">Resultat</h3>
+            <h3>Resultat</h3>
             <p>Antall administratorer: {admins.length}</p>
             <ul className="list-disc list-inside">
               {users.map((u) => {
