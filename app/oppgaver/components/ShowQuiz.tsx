@@ -1,15 +1,19 @@
 "use client"
 
 import { useQuizStore } from "@/app/store/store";
+import { useState, useEffect } from "react";
 
 export default function ShowQuiz() {
+    const [isClient, setIsClient] = useState(false);
     const myQuestions = useQuizStore((state) => state.myQuestions);
     const setAnswer = useQuizStore((state) => state.setAnswer);
-    const _hasHydrated = useQuizStore((state) => state._hasHydrated)
-    console.log('_hasHydrated value:', _hasHydrated);
-    console.log('Store state:', useQuizStore.getState()); 
+    const UserAnswers = useQuizStore((state) => state.UserAnswers)
 
-    if(!_hasHydrated) {
+    useEffect(() => {
+        setIsClient(true);
+    }, [])
+
+    if(!isClient) {
         return <div>Loading...</div>;
     }
 
@@ -27,6 +31,7 @@ export default function ShowQuiz() {
             )}
             <input type="text" 
             placeholder="Type answer here" 
+            value={UserAnswers[question.id] || '' }
             //(evt) lager en funkjson som tar imot eventet
             onChange={(evt) => setAnswer(question.id, evt.target.value)} ></input>
      </article>
