@@ -14,7 +14,7 @@ export default function Home() {
           </Link>
         </div>
         <Image
-          src="/wizard.png"
+          src="/assets/wizard.png"
           alt="Trollmann som koder"
           width={400}
           height={400}
