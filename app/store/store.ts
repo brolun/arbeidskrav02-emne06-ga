@@ -12,6 +12,7 @@ type useQuizStore = {
     myQuestions: Question[];
     UserAnswers:{ [questionId: number] : string}
     setAnswer: (questionId: number, answer: string) => void;
+    clearAnswers: () => void; //Void betyr at funksjonen ikke returnerer noe
 }
 //for UserAnswers: Brackets gjør at property can endre seg
 //UserAnswers lager et objekt som tar imot svar som f.eks {1: "A"}
@@ -154,14 +155,11 @@ export const useQuizStore = create<useQuizStore>()(
   ],
 UserAnswers: {}, //second property of store object 
 
-setAnswer: (questionID: number, answer: string) => set((state) => {
-  console.log("setAnswer called")
-  console.log('UserAnswers:', state.UserAnswers);
-  return { UserAnswers: {...state.UserAnswers, [questionID]: answer} };
-})
-/*setAnswer: (questionID: number, answer: string) => set((state) => ({
+setAnswer: (questionID: number, answer: string) => set((state) => ({
   UserAnswers: {...state.UserAnswers, [questionID]: answer}
-})) */
+})),
+
+clearAnswers: () => set({UserAnswers: {} }),
  
 }), //end of store object
 { name: "answer-storage" }

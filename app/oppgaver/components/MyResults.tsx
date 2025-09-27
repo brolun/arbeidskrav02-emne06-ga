@@ -1,12 +1,31 @@
 import { useQuizStore } from "@/app/store/store";
+import RetakeTest from "./RetakeTest";
 
-export default function MyResults() {
+type RetakeTestProps = {
+    resetQuiz: () => void;
+}
+
+
+export default function MyResults( { resetQuiz }: RetakeTestProps) {
     const UserAnswers = useQuizStore((state) => state.UserAnswers);
     const myQuestions = useQuizStore((state) => state.myQuestions);
+
+    const correctAnswers = myQuestions.filter(question => {
+        const userAnswer = UserAnswers[question.id];
+        return userAnswer === question.correctAnswer;
+    }).length;
+
+    const percentage = Math.round((correctAnswers / myQuestions.length) * 100);
+    const passMessage = percentage >= 80 ? 
+    `Du har svart ${percentage}% riktig, og har bestått kurset!` :
+    `Du har svart ${percentage}% riktig.`
 
 return (
     <div>
     <h2>Your Results</h2>
+    <p>{passMessage}</p>
+    
+
     {myQuestions.map(question => {
         const UserAnswer = UserAnswers[question.id]; 
         //Dette bruker id fra UserAnswers og id fra questions array 
@@ -32,7 +51,7 @@ return (
             </div>
         );
     })}
-    <button>Take the test again</button>
+    <RetakeTest resetQuiz={resetQuiz} />
     </div>
 )
 } 

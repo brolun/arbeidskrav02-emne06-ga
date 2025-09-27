@@ -2,7 +2,7 @@
 
 import  MyResults from "../components/MyResults";
 import { useQuizStore } from "@/app/store/store";
-import { useState, useEffect } from "react";
+import { useState, useEffect } from "react";  
 
 export default function ShowQuiz() {
     const[isSubmitted, setIsSubmitted] = useState(false);
@@ -10,6 +10,11 @@ export default function ShowQuiz() {
     const myQuestions = useQuizStore((state) => state.myQuestions);
     const setAnswer = useQuizStore((state) => state.setAnswer);
     const UserAnswers = useQuizStore((state) => state.UserAnswers)
+
+    function resetQuiz (){
+        setIsSubmitted(false);
+        useQuizStore.getState().clearAnswers();
+    };
 
     useEffect(() => {
         setIsClient(true);
@@ -19,7 +24,7 @@ export default function ShowQuiz() {
         return <div>Loading...</div>;
     }
 
-    return isSubmitted ? <MyResults /> : (
+    return isSubmitted ? <MyResults resetQuiz={resetQuiz}/> : (
         <main>
             {
             myQuestions.map(question => <article key={question.id}>
