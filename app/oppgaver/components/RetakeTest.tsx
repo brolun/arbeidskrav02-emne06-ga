@@ -1,13 +1,9 @@
+import { Button } from "@/app/components/Button";
 
 type RetakeTestProps = {
-    resetQuiz: () => void;
-}
+  resetQuiz: () => void;
+};
 
-
-export default function RetakeTest( { resetQuiz }: RetakeTestProps) {
-
-    
-    return (
-        <button onClick={resetQuiz}>Take the test again</button>
-    )
+export default function RetakeTest({ resetQuiz }: RetakeTestProps) {
+  return <Button onClick={resetQuiz}>Prøv igjen</Button>;
 }
