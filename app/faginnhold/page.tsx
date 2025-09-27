@@ -13,16 +13,11 @@ export default function Page() {
         {faginnholdChildren.map((emne) => (
           <div
             key={emne.href}
-            className="bg-gray-800 space-y-4 p-5 rounded-lg shadow hover:shadow-lg transition flex flex-col justify-between h-full"
+            className="card shadow hover:shadow-lg transition flex flex-col justify-between h-full"
           >
-            <h3 className="text-xl font-semibold mb-3 text-white">
-              {emne.label}
-            </h3>
-            <p className="text-gray-300">{emne.desc}</p>
-            <Link
-              href={emne.href}
-              className="px-4 py-2 bg-blue-600 hover:bg-blue-500 text-white rounded transition self-start"
-            >
+            <h3>{emne.label}</h3>
+            <p>{emne.desc}</p>
+            <Link href={emne.href} className="button self-start">
               Les mer
             </Link>
           </div>

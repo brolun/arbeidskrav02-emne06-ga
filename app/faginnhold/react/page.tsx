@@ -30,13 +30,13 @@ export default function Page() {
   );
 
   return (
-    <main className="max-w-3xl mx-auto p-6 space-y-6">
-      <section className="space-y-4">
-        <h1 className="text-2xl font-bold">React</h1>
+    <>
+      <section className="code-info">
+        <h2>React</h2>
         <p>
           <strong>React</strong> er et verktøy (et bibliotek) laget i JavaScript
           som hjelper til med å bygge <strong>nettsider og apper</strong> på en
-          måte som gjør dem <strong>raske, oversiktlige</strong> og{" "}
+          måte som gjør dem <strong>raske, oversiktlige</strong> og
           <strong>enkle å videreutvikle</strong>.
         </p>
         <p>
@@ -54,7 +54,7 @@ export default function Page() {
           gang.
         </p>
 
-        <h2 className="text-xl font-semibold">Hva brukes det til?</h2>
+        <h3>Hva brukes det til?</h3>
         <ul className="list-disc list-inside">
           <li>
             Å lage <strong>moderne nettsider og apper</strong> (f.eks. bruker
@@ -67,44 +67,46 @@ export default function Page() {
         </ul>
       </section>
 
-      <section className="space-y-4">
+      <section className="code-example">
         <button
           type="button"
           onClick={() => setShowExample((v) => !v)}
           aria-expanded={showExample}
-          className="px-4 py-2 rounded-lg font-medium text-white bg-blue-600 hover:bg-blue-500 transition"
+          className="button"
         >
           {showExample ? "Skjul eksempel" : "Eksempel"}
         </button>
 
         {showExample && (
-          <div className="space-y-4">
-            <h3 className="text-lg font-semibold">Kode (utdrag)</h3>
-            <pre className="bg-gray-900 text-gray-100 p-4 rounded-lg text-sm whitespace-pre-wrap break-words">
+          <>
+            <h3>Kode (utdrag)</h3>
+            <pre>
               {`type User = { id: number; name: string; role?: "admin" | "editor" | "viewer" };
 
-function pickBy<T extends object, K extends keyof T>(obj: T, keys: K[]): Pick<T,K> {
+  function pickBy<T extends object, K extends keyof T>(obj: T, keys: K[]): Pick<T,K> {
   const out = {} as Pick<T,K>;
   for (const k of keys) (out as any)[k] = obj[k];
   return out;
 }`}
             </pre>
 
-            <h3 className="text-lg font-semibold">Resultat</h3>
-            <p>Antall administratorer: {admins.length}</p>
-            <ul className="list-disc list-inside">
-              {users.map((u) => {
-                const safe = pickBy(u, ["id", "name"]);
-                return (
-                  <li key={u.id}>
-                    {safe.name} (ID: {safe.id}) {u.role && `[${u.role}]`}
-                  </li>
-                );
-              })}
-            </ul>
-          </div>
+            <h3>Resultat</h3>
+            <div className="card">
+              <p>Antall administratorer: {admins.length}</p>
+              <ul className="list-disc list-inside">
+                {users.map((u) => {
+                  const safe = pickBy(u, ["id", "name"]);
+                  return (
+                    <li key={u.id}>
+                      {safe.name} (ID: {safe.id}) {u.role && `[${u.role}]`}
+                    </li>
+                  );
+                })}
+              </ul>
+            </div>
+          </>
         )}
       </section>
-    </main>
+    </>
   );
 }

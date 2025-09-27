@@ -49,14 +49,13 @@ async function hentHpKarakterer() {
   }
 
   return (
-    <main className="max-w-3xl mx-auto p-6 space-y-6">
-      <section className="space-y-4">
-        <h1 className="text-2xl font-bold">API</h1>
+    <>
+      <section className="code-info">
+        <h2>API</h2>
         <p>
-          Et <strong>API (Application Programming Interface)</strong> er et
-          <strong> grensesnitt</strong> som gjør at to programmer eller systemer
-          kan
-          <strong> snakke sammen</strong>.
+          Et <strong>API (Application Programming Interface)</strong> er et{" "}
+          <strong>grensesnitt</strong> som gjør at to programmer eller systemer
+          kan <strong>snakke sammen</strong>.
         </p>
         <p>
           Det brukes for å <strong>hente</strong> informasjon (for eksempel en
@@ -72,29 +71,27 @@ async function hentHpKarakterer() {
         </p>
       </section>
 
-      <section className="space-y-4">
+      <section className="code-example">
         <button
           type="button"
           onClick={() => setShowExample((v) => !v)}
           aria-expanded={showExample}
-          className="px-4 py-2 rounded-lg font-medium text-white bg-blue-600 hover:bg-blue-500 transition"
+          className="button"
         >
           {showExample ? "Skjul eksempel" : "Eksempel"}
         </button>
 
         {showExample && (
-          <div className="space-y-6">
-            <h2 className="text-xl font-semibold">Kode (eksempel)</h2>
-            <pre className="bg-gray-900 text-gray-100 p-4 rounded-lg text-sm whitespace-pre-wrap break-words">
-              {snippet}
-            </pre>
+          <>
+            <h3>Kode (eksempel)</h3>
+            <pre>{snippet}</pre>
 
-            <h2 className="text-xl font-semibold">Resultat</h2>
-            <div className="bg-gray-800 text-white p-4 rounded-lg space-y-4">
+            <h3>Resultat</h3>
+            <div className="card">
               <button
                 onClick={hentHpKarakterer}
                 disabled={loading}
-                className="px-3 py-1 rounded bg-green-600 hover:bg-green-500 disabled:opacity-60"
+                className="button"
               >
                 {loading ? "Laster..." : "Hent 5 karakterer"}
               </button>
@@ -114,9 +111,9 @@ async function hentHpKarakterer() {
                 )
               )}
             </div>
-          </div>
+          </>
         )}
       </section>
-    </main>
+    </>
   );
 }

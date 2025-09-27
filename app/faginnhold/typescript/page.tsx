@@ -48,9 +48,9 @@ const users: User[] = [
 const admins = users.filter(u => u.role === "admin"); // type-sjekket ved bygging`;
 
   return (
-    <main className="max-w-3xl mx-auto p-6 space-y-6">
-      <section className="space-y-4">
-        <h1 className="text-2xl font-bold">TypeScript</h1>
+    <>
+      <section className="code-info">
+        <h2>TypeScript</h2>
         <p>
           <strong>TypeScript</strong> er JavaScript med <strong>typer</strong>.
           Typene hjelper deg å oppdage feil mens du koder (før siden kjøres), og
@@ -79,25 +79,23 @@ const admins = users.filter(u => u.role === "admin"); // type-sjekket ved byggin
         </ul>
       </section>
 
-      <section className="space-y-4">
+      <section className="code-example">
         <button
           type="button"
           onClick={() => setShowExample((v) => !v)}
           aria-expanded={showExample}
-          className="px-4 py-2 rounded-lg font-medium text-white bg-blue-600 hover:bg-blue-500 transition"
+          className="button"
         >
           {showExample ? "Skjul eksempel" : "Eksempel"}
         </button>
 
         {showExample && (
-          <div className="space-y-6">
-            <h2 className="text-xl font-semibold">Kode (utdrag)</h2>
-            <pre className="bg-gray-900 text-gray-100 p-4 rounded-lg text-sm whitespace-pre-wrap break-words">
-              {snippet}
-            </pre>
+          <>
+            <h3>Kode (utdrag)</h3>
+            <pre>{snippet}</pre>
 
-            <h2 className="text-xl font-semibold">Resultat</h2>
-            <div className="bg-gray-800 text-white p-4 rounded-lg space-y-3">
+            <h3>Resultat</h3>
+            <div className="card">
               <p>Antall administratorer: {admins.length}</p>
               <ul className="list-disc list-inside">
                 {users.map((u) => {
@@ -109,14 +107,14 @@ const admins = users.filter(u => u.role === "admin"); // type-sjekket ved byggin
                   );
                 })}
               </ul>
-              <p className="text-gray-300 text-sm">
+              <p className="text-gray-300 text-sm mt-6">
                 Merk: TypeScript-feil fanges under utvikling – i nettleseren
                 kjører ren JavaScript.
               </p>
             </div>
-          </div>
+          </>
         )}
       </section>
-    </main>
+    </>
   );
 }

@@ -24,9 +24,9 @@ function handleClick() {
 }`;
 
   return (
-    <main className="max-w-3xl mx-auto p-6 space-y-6">
-      <section className="space-y-4">
-        <h1 className="text-2xl font-bold">JavaScript</h1>
+    <>
+      <section className="code-info">
+        <h2>JavaScript</h2>
         <p>
           <strong>JavaScript</strong> er et programmeringsspråk som gjør
           nettsider <strong>dynamiske</strong> og <strong>interaktive</strong>.
@@ -44,56 +44,44 @@ function handleClick() {
         </p>
       </section>
 
-      <section className="space-y-4">
+      <section className="code-example">
         <button
           type="button"
           onClick={() => setShowExample((v) => !v)}
           aria-expanded={showExample}
-          className="px-4 py-2 rounded-lg font-medium text-white bg-blue-600 hover:bg-blue-500 transition"
+          className="button"
         >
           {showExample ? "Skjul eksempel" : "Eksempel"}
         </button>
 
         {showExample && (
-          <div className="space-y-8">
-            <div className="space-y-4">
-              <h2 className="text-xl font-semibold">
-                Kode (eksempel 1: lister)
-              </h2>
-              <pre className="bg-gray-900 text-gray-100 p-4 rounded-lg text-sm whitespace-pre-wrap break-words">
-                {snippet1}
-              </pre>
+          <>
+            <h3>Kode (eksempel 1: lister)</h3>
+            <pre>{snippet1}</pre>
 
-              <h2 className="text-xl font-semibold">Resultat</h2>
-              <div className="bg-gray-800 p-4 rounded-lg space-y-2">
-                <p>Opprinnelige tall: {numbers.join(", ")}</p>
-                <p>Doblede tall: {doubled.join(", ")}</p>
-                <p>Summen av tallene: {sum}</p>
-              </div>
+            <h3>Resultat</h3>
+            <div className="card">
+              <p>Opprinnelige tall: {numbers.join(", ")}</p>
+              <p>Doblede tall: {doubled.join(", ")}</p>
+              <p>Summen av tallene: {sum}</p>
             </div>
 
-            <div className="space-y-4">
-              <h2 className="text-xl font-semibold">
-                Kode (eksempel 2: klikk-teller)
-              </h2>
-              <pre className="bg-gray-900 text-gray-100 p-4 rounded-lg text-sm whitespace-pre-wrap break-words">
-                {snippet2}
-              </pre>
+            <h3>Kode (eksempel 2: klikk-teller)</h3>
+            <pre>{snippet2}</pre>
 
-              <h2 className="text-xl font-semibold">Resultat</h2>
-              <div className="bg-gray-800 p-4 rounded-lg space-y-2">
-                <p>Antall klikk: {clicks}</p>
-                <button
-                  onClick={() => setClicks((c) => c + 1)}
-                  className="px-4 py-2 rounded-lg font-medium text-white bg-blue-600 hover:bg-blue-500 transition"
-                >
-                  Klikk meg
-                </button>
-              </div>
+            <h3>Resultat</h3>
+            <div className="card">
+              <p>Antall klikk: {clicks}</p>
+              <button
+                onClick={() => setClicks((c) => c + 1)}
+                className="button"
+              >
+                Klikk meg
+              </button>
             </div>
-          </div>
+          </>
         )}
       </section>
-    </main>
+    </>
   );
 }
