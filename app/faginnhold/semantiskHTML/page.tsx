@@ -30,7 +30,7 @@ export default function Page() {
 </footer>`;
 
   return (
-    <div className="max-w-3xl mx-auto p-6 space-y-6">
+    <>
       <section className="space-y-4">
         <h2>Semantisk HTML</h2>
         <p>
@@ -70,7 +70,7 @@ export default function Page() {
         </button>
 
         {showExample && (
-          <div className="space-y-6">
+          <>
             <h3>Kode (utdrag)</h3>
             <pre>{snippet}</pre>
 
@@ -108,9 +108,9 @@ export default function Page() {
                 <small>Footer</small>
               </footer>
             </div>
-          </div>
+          </>
         )}
       </section>
-    </div>
+    </>
   );
 }

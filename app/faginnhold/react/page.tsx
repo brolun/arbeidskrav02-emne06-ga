@@ -30,7 +30,7 @@ export default function Page() {
   );
 
   return (
-    <div className="max-w-3xl mx-auto p-6 space-y-6">
+    <>
       <section className="space-y-4">
         <h2>React</h2>
         <p>
@@ -78,12 +78,12 @@ export default function Page() {
         </button>
 
         {showExample && (
-          <div className="space-y-4">
+          <>
             <h3>Kode (utdrag)</h3>
             <pre>
               {`type User = { id: number; name: string; role?: "admin" | "editor" | "viewer" };
 
-function pickBy<T extends object, K extends keyof T>(obj: T, keys: K[]): Pick<T,K> {
+  function pickBy<T extends object, K extends keyof T>(obj: T, keys: K[]): Pick<T,K> {
   const out = {} as Pick<T,K>;
   for (const k of keys) (out as any)[k] = obj[k];
   return out;
@@ -104,9 +104,9 @@ function pickBy<T extends object, K extends keyof T>(obj: T, keys: K[]): Pick<T,
                 })}
               </ul>
             </div>
-          </div>
+          </>
         )}
       </section>
-    </div>
+    </>
   );
 }

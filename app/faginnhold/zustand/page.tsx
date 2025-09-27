@@ -22,23 +22,20 @@ export default function Page() {
   const [showExample, setShowExample] = useState(false);
 
   return (
-    <div className="max-w-3xl mx-auto p-6 space-y-6">
+    <>
       <section className="space-y-4">
         <h2>Zustand</h2>
-
         <p>
           <strong>Zustand</strong> er som en liten boks der en app kan lagre
           tall, data og informasjon, slik at man lett kan finne dem igjen og
           endre dem.
         </p>
-
         <p>
           I en vanlig nettside husker hver knapp eller del av skjermen bare sine
           egne data. Hvis flere forskjellige deler skal bruke den samme
           informasjonen (f.eks. en teller, en innlogget bruker eller en
           handlekurv), kan det fort bli rotete.
         </p>
-
         <p className="font-medium">Zustand løser dette problemet:</p>
         <ul className="list-disc list-inside">
           <li>
@@ -51,7 +48,6 @@ export default function Page() {
             handlekurv).
           </li>
         </ul>
-
         <p>
           Slik blir appen enklere, og alt som skal oppdateres på skjermen endrer
           seg automatisk overalt hvor dataene brukes.
@@ -69,7 +65,7 @@ export default function Page() {
         </button>
 
         {showExample && (
-          <div className="space-y-6">
+          <>
             <h3>Kode (utdrag)</h3>
             <pre>
               {`type CounterState = {
@@ -111,9 +107,9 @@ const useCounterStore = create<CounterState>((set) => ({
                 </button>
               </div>
             </div>
-          </div>
+          </>
         )}
       </section>
-    </div>
+    </>
   );
 }

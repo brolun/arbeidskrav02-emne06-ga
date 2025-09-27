@@ -49,7 +49,7 @@ async function hentHpKarakterer() {
   }
 
   return (
-    <div>
+    <>
       <section className="space-y-4 mb-6">
         <h2>API</h2>
         <p>
@@ -82,7 +82,7 @@ async function hentHpKarakterer() {
         </button>
 
         {showExample && (
-          <div className="space-y-6">
+          <>
             <h3>Kode (eksempel)</h3>
             <pre>{snippet}</pre>
 
@@ -111,9 +111,9 @@ async function hentHpKarakterer() {
                 )
               )}
             </div>
-          </div>
+          </>
         )}
       </section>
-    </div>
+    </>
   );
 }

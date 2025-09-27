@@ -24,8 +24,8 @@ function handleClick() {
 }`;
 
   return (
-    <div className="max-w-3xl mx-auto p-6 space-y-6">
-      <section className="space-y-4">
+    <>
+      <section className="space-y-4 mb-6">
         <h2>JavaScript</h2>
         <p>
           <strong>JavaScript</strong> er et programmeringsspråk som gjør
@@ -55,37 +55,33 @@ function handleClick() {
         </button>
 
         {showExample && (
-          <div className="space-y-8">
-            <div className="space-y-4">
-              <h3>Kode (eksempel 1: lister)</h3>
-              <pre>{snippet1}</pre>
+          <>
+            <h3>Kode (eksempel 1: lister)</h3>
+            <pre>{snippet1}</pre>
 
-              <h3>Resultat</h3>
-              <div className="card">
-                <p>Opprinnelige tall: {numbers.join(", ")}</p>
-                <p>Doblede tall: {doubled.join(", ")}</p>
-                <p>Summen av tallene: {sum}</p>
-              </div>
+            <h3>Resultat</h3>
+            <div className="card">
+              <p>Opprinnelige tall: {numbers.join(", ")}</p>
+              <p>Doblede tall: {doubled.join(", ")}</p>
+              <p>Summen av tallene: {sum}</p>
             </div>
 
-            <div className="space-y-4">
-              <h3>Kode (eksempel 2: klikk-teller)</h3>
-              <pre>{snippet2}</pre>
+            <h3>Kode (eksempel 2: klikk-teller)</h3>
+            <pre>{snippet2}</pre>
 
-              <h3>Resultat</h3>
-              <div className="card">
-                <p>Antall klikk: {clicks}</p>
-                <button
-                  onClick={() => setClicks((c) => c + 1)}
-                  className="button"
-                >
-                  Klikk meg
-                </button>
-              </div>
+            <h3>Resultat</h3>
+            <div className="card">
+              <p>Antall klikk: {clicks}</p>
+              <button
+                onClick={() => setClicks((c) => c + 1)}
+                className="button"
+              >
+                Klikk meg
+              </button>
             </div>
-          </div>
+          </>
         )}
       </section>
-    </div>
+    </>
   );
 }

@@ -48,7 +48,7 @@ const users: User[] = [
 const admins = users.filter(u => u.role === "admin"); // type-sjekket ved bygging`;
 
   return (
-    <div className="max-w-3xl mx-auto p-6 space-y-6">
+    <>
       <section className="space-y-4">
         <h2>TypeScript</h2>
         <p>
@@ -90,7 +90,7 @@ const admins = users.filter(u => u.role === "admin"); // type-sjekket ved byggin
         </button>
 
         {showExample && (
-          <div className="space-y-6">
+          <>
             <h3>Kode (utdrag)</h3>
             <pre>{snippet}</pre>
 
@@ -112,9 +112,9 @@ const admins = users.filter(u => u.role === "admin"); // type-sjekket ved byggin
                 kjører ren JavaScript.
               </p>
             </div>
-          </div>
+          </>
         )}
       </section>
-    </div>
+    </>
   );
 }
