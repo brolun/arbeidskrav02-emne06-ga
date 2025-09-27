@@ -50,7 +50,7 @@ const admins = users.filter(u => u.role === "admin"); // type-sjekket ved byggin
   return (
     <div className="max-w-3xl mx-auto p-6 space-y-6">
       <section className="space-y-4">
-        <h2 className="text-2xl font-bold">TypeScript</h2>
+        <h2>TypeScript</h2>
         <p>
           <strong>TypeScript</strong> er JavaScript med <strong>typer</strong>.
           Typene hjelper deg å oppdage feil mens du koder (før siden kjøres), og
@@ -84,19 +84,19 @@ const admins = users.filter(u => u.role === "admin"); // type-sjekket ved byggin
           type="button"
           onClick={() => setShowExample((v) => !v)}
           aria-expanded={showExample}
-          className="px-4 py-2 rounded-lg font-medium text-white bg-blue-600 hover:bg-blue-500 transition"
+          className="button"
         >
           {showExample ? "Skjul eksempel" : "Eksempel"}
         </button>
 
         {showExample && (
           <div className="space-y-6">
-            <h2 className="text-xl font-semibold">Kode (utdrag)</h2>
+            <h3>Kode (utdrag)</h3>
             <pre className="bg-gray-900 text-gray-100 p-4 rounded-lg text-sm whitespace-pre-wrap break-words">
               {snippet}
             </pre>
 
-            <h2 className="text-xl font-semibold">Resultat</h2>
+            <h3>Resultat</h3>
             <div className="bg-gray-800 text-white p-4 rounded-lg space-y-3">
               <p>Antall administratorer: {admins.length}</p>
               <ul className="list-disc list-inside">

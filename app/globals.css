@@ -35,8 +35,7 @@ h2 {
   @apply text-3xl font-semibold mb-8 mt-4;
 }
 h3 {
-  @apply text-2
-  xl font-semibold mb-6 mt-4;
+  @apply text-2xl font-semibold mb-6 mt-4;
 }
 
 .button {

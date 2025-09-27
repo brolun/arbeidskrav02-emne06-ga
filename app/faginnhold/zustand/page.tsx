@@ -24,7 +24,7 @@ export default function Page() {
   return (
     <div className="max-w-3xl mx-auto p-6 space-y-6">
       <section className="space-y-4">
-        <h2 className="text-2xl font-bold">Zustand</h2>
+        <h2>Zustand</h2>
 
         <p>
           <strong>Zustand</strong> er som en liten boks der en app kan lagre
@@ -63,14 +63,14 @@ export default function Page() {
           type="button"
           onClick={() => setShowExample((v) => !v)}
           aria-expanded={showExample}
-          className="px-4 py-2 rounded-lg font-medium text-white bg-blue-600 hover:bg-blue-500 transition"
+          className="button"
         >
           {showExample ? "Skjul eksempel" : "Eksempel"}
         </button>
 
         {showExample && (
           <div className="space-y-6">
-            <h2 className="text-xl font-semibold">Kode (utdrag)</h2>
+            <h3>Kode (utdrag)</h3>
             <pre className="bg-gray-900 text-gray-100 p-4 rounded-lg text-sm whitespace-pre-wrap break-words">
               {`type CounterState = {
   count: number;
@@ -87,7 +87,7 @@ const useCounterStore = create<CounterState>((set) => ({
 }));`}
             </pre>
 
-            <h2 className="text-xl font-semibold">Resultat</h2>
+            <h3>Resultat</h3>
             <p className="mb-2">Nåværende verdi: {count}</p>
             <div className="space-x-2">
               <button

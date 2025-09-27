@@ -90,28 +90,28 @@ async function hentHpKarakterer() {
 
             <h3>Resultat</h3>
 
-              <button
-                onClick={hentHpKarakterer}
-                disabled={loading}
-                className="px-3 py-1 rounded bg-green-600 hover:bg-green-500 disabled:opacity-60"
-              >
-                {loading ? "Laster..." : "Hent 5 karakterer"}
-              </button>
+            <button
+              onClick={hentHpKarakterer}
+              disabled={loading}
+              className="button"
+            >
+              {loading ? "Laster..." : "Hent 5 karakterer"}
+            </button>
 
-              {items.length > 0 ? (
-                <ul className="list-disc list-inside space-y-1">
-                  {items.map((it, idx) => (
-                    <li key={idx}>
-                      {it.name}
-                      {it.house ? ` — ${it.house}` : ""}
-                    </li>
-                  ))}
-                </ul>
-              ) : (
-                !loading && (
-                  <p className="text-gray-300">Ingen data hentet ennå.</p>
-                )
-              )}
+            {items.length > 0 ? (
+              <ul className="list-disc list-inside space-y-1">
+                {items.map((it, idx) => (
+                  <li key={idx}>
+                    {it.name}
+                    {it.house ? ` — ${it.house}` : ""}
+                  </li>
+                ))}
+              </ul>
+            ) : (
+              !loading && (
+                <p className="text-gray-300">Ingen data hentet ennå.</p>
+              )
+            )}
           </div>
         )}
       </section>

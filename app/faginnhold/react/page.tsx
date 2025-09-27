@@ -54,7 +54,7 @@ export default function Page() {
           gang.
         </p>
 
-        <h2>Hva brukes det til?</h2>
+        <h3>Hva brukes det til?</h3>
         <ul className="list-disc list-inside">
           <li>
             Å lage <strong>moderne nettsider og apper</strong> (f.eks. bruker
@@ -72,7 +72,7 @@ export default function Page() {
           type="button"
           onClick={() => setShowExample((v) => !v)}
           aria-expanded={showExample}
-          className="px-4 py-2 rounded-lg font-medium text-white bg-blue-600 hover:bg-blue-500 transition"
+          className="button"
         >
           {showExample ? "Skjul eksempel" : "Eksempel"}
         </button>

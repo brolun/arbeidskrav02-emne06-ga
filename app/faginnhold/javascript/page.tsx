@@ -26,7 +26,7 @@ function handleClick() {
   return (
     <div className="max-w-3xl mx-auto p-6 space-y-6">
       <section className="space-y-4">
-        <h2 className="text-2xl font-bold">JavaScript</h2>
+        <h2>JavaScript</h2>
         <p>
           <strong>JavaScript</strong> er et programmeringsspråk som gjør
           nettsider <strong>dynamiske</strong> og <strong>interaktive</strong>.
@@ -49,7 +49,7 @@ function handleClick() {
           type="button"
           onClick={() => setShowExample((v) => !v)}
           aria-expanded={showExample}
-          className="px-4 py-2 rounded-lg font-medium text-white bg-blue-600 hover:bg-blue-500 transition"
+          className="button"
         >
           {showExample ? "Skjul eksempel" : "Eksempel"}
         </button>
@@ -57,14 +57,12 @@ function handleClick() {
         {showExample && (
           <div className="space-y-8">
             <div className="space-y-4">
-              <h2 className="text-xl font-semibold">
-                Kode (eksempel 1: lister)
-              </h2>
+              <h3>Kode (eksempel 1: lister)</h3>
               <pre className="bg-gray-900 text-gray-100 p-4 rounded-lg text-sm whitespace-pre-wrap break-words">
                 {snippet1}
               </pre>
 
-              <h2 className="text-xl font-semibold">Resultat</h2>
+              <h3>Resultat</h3>
               <div className="bg-dark p-4 rounded-lg space-y-2">
                 <p>Opprinnelige tall: {numbers.join(", ")}</p>
                 <p>Doblede tall: {doubled.join(", ")}</p>
@@ -73,19 +71,17 @@ function handleClick() {
             </div>
 
             <div className="space-y-4">
-              <h2 className="text-xl font-semibold">
-                Kode (eksempel 2: klikk-teller)
-              </h2>
+              <h3>Kode (eksempel 2: klikk-teller)</h3>
               <pre className="bg-gray-900 text-gray-100 p-4 rounded-lg text-sm whitespace-pre-wrap break-words">
                 {snippet2}
               </pre>
 
-              <h2 className="text-xl font-semibold">Resultat</h2>
+              <h3>Resultat</h3>
               <div className="bg-dark p-4 rounded-lg space-y-2">
                 <p>Antall klikk: {clicks}</p>
                 <button
                   onClick={() => setClicks((c) => c + 1)}
-                  className="px-4 py-2 rounded-lg font-medium text-white bg-blue-600 hover:bg-blue-500 transition"
+                  className="button"
                 >
                   Klikk meg
                 </button>
