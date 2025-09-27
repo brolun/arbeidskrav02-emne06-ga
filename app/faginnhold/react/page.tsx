@@ -1,5 +1,6 @@
 "use client";
 
+import { Button } from "@/app/components/Button";
 import { useMemo, useState } from "react";
 
 type User = { id: number; name: string; role?: "admin" | "editor" | "viewer" };
@@ -68,14 +69,12 @@ export default function Page() {
       </section>
 
       <section className="code-example">
-        <button
-          type="button"
+        <Button
           onClick={() => setShowExample((v) => !v)}
           aria-expanded={showExample}
-          className="button"
         >
           {showExample ? "Skjul eksempel" : "Eksempel"}
-        </button>
+        </Button>
 
         {showExample && (
           <>

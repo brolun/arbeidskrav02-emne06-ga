@@ -38,15 +38,6 @@ h3 {
   @apply text-2xl font-semibold;
 }
 
-.button {
-  @apply px-4 py-2 rounded transition;
-  background: var(--accent);
-  color: var(--secondary);
-}
-.button:hover {
-  @apply shadow-lg;
-}
-
 .card {
   @apply p-4 rounded-lg space-y-4;
   background: var(--secondary);

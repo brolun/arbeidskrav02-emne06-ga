@@ -1,5 +1,6 @@
 "use client";
 
+import { Button } from "@/app/components/Button";
 import { useState } from "react";
 
 export default function Page() {
@@ -45,14 +46,12 @@ function handleClick() {
       </section>
 
       <section className="code-example">
-        <button
-          type="button"
+        <Button
           onClick={() => setShowExample((v) => !v)}
           aria-expanded={showExample}
-          className="button"
         >
           {showExample ? "Skjul eksempel" : "Eksempel"}
-        </button>
+        </Button>
 
         {showExample && (
           <>
@@ -72,12 +71,7 @@ function handleClick() {
             <h3>Resultat</h3>
             <div className="card">
               <p>Antall klikk: {clicks}</p>
-              <button
-                onClick={() => setClicks((c) => c + 1)}
-                className="button"
-              >
-                Klikk meg
-              </button>
+              <Button onClick={() => setClicks((c) => c + 1)}>Klikk meg</Button>
             </div>
           </>
         )}

@@ -1,7 +1,15 @@
-import Link from "next/link";
+"use client";
 import Image from "next/image";
+import { Button } from "./components/Button";
+import { useRouter } from "next/navigation";
 
 export default function Home() {
+  const router = useRouter();
+
+  const handleButtonClick = () => {
+    router.push("/faginnhold");
+  };
+
   return (
     <>
       <section className="max-w-5xl mx-auto flex flex-col md:flex-row justify-center items-center">
@@ -9,9 +17,7 @@ export default function Home() {
           <p className="mb-10 text-4xl font-semibold text-dark">
             Lær å mestre webens magi — fra nybegynner til trollmann.
           </p>
-          <Link href="/faginnhold" className="inline-block px-6 py-3 button">
-            Start din reise her
-          </Link>
+          <Button onClick={handleButtonClick}>Start din reise her</Button>
         </div>
         <Image
           src="/assets/wizard.png"

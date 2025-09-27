@@ -1,8 +1,15 @@
 "use client";
-import Link from "next/link";
 import { faginnholdChildren } from "../components/FaginnholdChildren";
+import { Button } from "../components/Button";
+import { useRouter } from "next/navigation";
 
 export default function Page() {
+  const router = useRouter();
+
+  const handleButtonClick = (href: string) => {
+    router.push(href);
+  };
+
   return (
     <>
       <p className="text-center mb-6">
@@ -17,9 +24,12 @@ export default function Page() {
           >
             <h3>{emne.label}</h3>
             <p>{emne.desc}</p>
-            <Link href={emne.href} className="button self-start">
+            <Button
+              onClick={() => handleButtonClick(emne.href)}
+              className="self-start"
+            >
               Les mer
-            </Link>
+            </Button>
           </div>
         ))}
       </section>
