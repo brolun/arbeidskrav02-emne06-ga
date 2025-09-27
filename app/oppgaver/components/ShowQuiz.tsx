@@ -42,6 +42,7 @@ export default function ShowQuiz() {
             </select>
      </article>
     )}
+    <button type="submit">Submit your answers here!</button>
     </main>
     )
 }
