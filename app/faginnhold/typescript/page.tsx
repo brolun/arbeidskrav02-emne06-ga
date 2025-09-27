@@ -95,7 +95,7 @@ const admins = users.filter(u => u.role === "admin"); // type-sjekket ved byggin
             <pre>{snippet}</pre>
 
             <h3>Resultat</h3>
-            <div className="bg-gray-800 text-white p-4 rounded-lg space-y-3">
+            <div className="card">
               <p>Antall administratorer: {admins.length}</p>
               <ul className="list-disc list-inside">
                 {users.map((u) => {
@@ -107,7 +107,7 @@ const admins = users.filter(u => u.role === "admin"); // type-sjekket ved byggin
                   );
                 })}
               </ul>
-              <p className="text-gray-300 text-sm">
+              <p className="text-gray-300 text-sm mt-6">
                 Merk: TypeScript-feil fanges under utvikling – i nettleseren
                 kjører ren JavaScript.
               </p>

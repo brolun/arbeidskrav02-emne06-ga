@@ -91,17 +91,19 @@ function pickBy<T extends object, K extends keyof T>(obj: T, keys: K[]): Pick<T,
             </pre>
 
             <h3>Resultat</h3>
-            <p>Antall administratorer: {admins.length}</p>
-            <ul className="list-disc list-inside">
-              {users.map((u) => {
-                const safe = pickBy(u, ["id", "name"]);
-                return (
-                  <li key={u.id}>
-                    {safe.name} (ID: {safe.id}) {u.role && `[${u.role}]`}
-                  </li>
-                );
-              })}
-            </ul>
+            <div className="card">
+              <p>Antall administratorer: {admins.length}</p>
+              <ul className="list-disc list-inside">
+                {users.map((u) => {
+                  const safe = pickBy(u, ["id", "name"]);
+                  return (
+                    <li key={u.id}>
+                      {safe.name} (ID: {safe.id}) {u.role && `[${u.role}]`}
+                    </li>
+                  );
+                })}
+              </ul>
+            </div>
           </div>
         )}
       </section>

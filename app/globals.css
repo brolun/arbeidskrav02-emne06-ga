@@ -47,6 +47,12 @@ h3 {
   @apply shadow-lg;
 }
 
+.card {
+  @apply p-4 rounded-lg space-y-2;
+  background: var(--secondary);
+  color: var(--primary);
+}
+
 pre {
   @apply p-4 rounded-lg text-sm whitespace-pre-wrap break-words font-mono;
   background: var(--secondary);

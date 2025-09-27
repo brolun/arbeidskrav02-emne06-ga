@@ -61,7 +61,7 @@ function handleClick() {
               <pre>{snippet1}</pre>
 
               <h3>Resultat</h3>
-              <div className="bg-dark p-4 rounded-lg space-y-2">
+              <div className="card">
                 <p>Opprinnelige tall: {numbers.join(", ")}</p>
                 <p>Doblede tall: {doubled.join(", ")}</p>
                 <p>Summen av tallene: {sum}</p>
@@ -73,7 +73,7 @@ function handleClick() {
               <pre>{snippet2}</pre>
 
               <h3>Resultat</h3>
-              <div className="bg-dark p-4 rounded-lg space-y-2">
+              <div className="card">
                 <p>Antall klikk: {clicks}</p>
                 <button
                   onClick={() => setClicks((c) => c + 1)}
