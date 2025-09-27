@@ -2,6 +2,7 @@
 
 import { create } from "zustand";
 import { useState } from "react";
+import { Button } from "@/app/components/Button";
 
 type CounterState = {
   count: number;
@@ -55,14 +56,12 @@ export default function Page() {
       </section>
 
       <section className="code-example">
-        <button
-          type="button"
+        <Button
           onClick={() => setShowExample((v) => !v)}
           aria-expanded={showExample}
-          className="button"
         >
           {showExample ? "Skjul eksempel" : "Eksempel"}
-        </button>
+        </Button>
 
         {showExample && (
           <>

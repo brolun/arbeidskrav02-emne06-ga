@@ -1,5 +1,6 @@
 "use client";
 
+import { Button } from "@/app/components/Button";
 import { useState } from "react";
 
 type HpChar = {
@@ -72,14 +73,12 @@ async function hentHpKarakterer() {
       </section>
 
       <section className="code-example">
-        <button
-          type="button"
+        <Button
           onClick={() => setShowExample((v) => !v)}
           aria-expanded={showExample}
-          className="button"
         >
           {showExample ? "Skjul eksempel" : "Eksempel"}
-        </button>
+        </Button>
 
         {showExample && (
           <>
@@ -88,13 +87,9 @@ async function hentHpKarakterer() {
 
             <h3>Resultat</h3>
             <div className="card">
-              <button
-                onClick={hentHpKarakterer}
-                disabled={loading}
-                className="button"
-              >
+              <Button onClick={hentHpKarakterer} disabled={loading}>
                 {loading ? "Laster..." : "Hent 5 karakterer"}
-              </button>
+              </Button>
 
               {items.length > 0 ? (
                 <ul className="list-disc list-inside space-y-1">
