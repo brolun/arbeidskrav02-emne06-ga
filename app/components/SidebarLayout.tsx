@@ -15,7 +15,7 @@ type SidebarLayoutProps = {
   children: React.ReactNode;
 };
 
-export default function SidebarLayout({
+export function SidebarLayout({
   heading,
   links,
   basePath,

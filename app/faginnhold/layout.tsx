@@ -1,6 +1,6 @@
 "use client";
 import { ReactNode } from "react";
-import SidebarLayout from "../components/SidebarLayout";
+import { SidebarLayout } from "../components/SidebarLayout";
 import { faginnholdLinks } from "../components/NavLinks";
 
 export default function Layout({ children }: { children: ReactNode }) {

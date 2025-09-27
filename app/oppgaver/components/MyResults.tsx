@@ -1,11 +1,11 @@
 import { useQuizStore } from "@/app/store/store";
-import RetakeTest from "./RetakeTest";
+import { RetakeTest } from "./RetakeTest";
 
 type RetakeTestProps = {
   resetQuiz: () => void;
 };
 
-export default function MyResults({ resetQuiz }: RetakeTestProps) {
+export function MyResults({ resetQuiz }: RetakeTestProps) {
   const UserAnswers = useQuizStore((state) => state.UserAnswers);
   const myQuestions = useQuizStore((state) => state.myQuestions);
 

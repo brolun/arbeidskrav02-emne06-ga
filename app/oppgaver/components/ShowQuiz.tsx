@@ -1,11 +1,11 @@
 "use client";
 
 import { Button } from "@/app/components/Button";
-import MyResults from "../components/MyResults";
+import { MyResults } from "../components/MyResults";
 import { useQuizStore } from "@/app/store/store";
 import { useState, useEffect } from "react";
 
-export default function ShowQuiz() {
+export function ShowQuiz() {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isClient, setIsClient] = useState(false);
   const myQuestions = useQuizStore((state) => state.myQuestions);
