@@ -157,6 +157,7 @@ UserAnswers: {}, //second property of store object
 setAnswer: (questionID: number, answer: string) => set((state) => {
   console.log("setAnswer called")
   console.log('UserAnswers:', state.UserAnswers);
+  answer !=== toLowercase(A,B,C,D)
   return { UserAnswers: {...state.UserAnswers, [questionID]: answer} };
 })
 /*setAnswer: (questionID: number, answer: string) => set((state) => ({

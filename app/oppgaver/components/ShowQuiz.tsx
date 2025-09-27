@@ -29,11 +29,18 @@ export default function ShowQuiz() {
                 <li>{option.letter}. {option.answer}</li>
             </ul> 
             )}
-            <input type="text" 
-            placeholder="Type answer here" 
+            
+            <select
             value={UserAnswers[question.id] || '' }
             //(evt) lager en funkjson som tar imot eventet
-            onChange={(evt) => setAnswer(question.id, evt.target.value)} ></input>
+            onChange={(evt) => setAnswer(question.id, evt.target.value)}
+            > 
+                <option value="">Choose an answer:</option>
+                <option value="A">A</option>
+                <option value="B">B</option>
+                <option value="C">C</option>
+                <option value="D">D</option>
+            </select>
      </article>
     )}
     </main>
