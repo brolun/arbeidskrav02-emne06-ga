@@ -2,6 +2,7 @@
 import { faginnholdChildren } from "../components/FaginnholdChildren";
 import { useRouter } from "next/navigation";
 import { FaginnholdCard } from "./components/FaginnholdCard";
+import { Page } from "../components/Page";
 
 export default function FaginnholdParentPage() {
   const router = useRouter();
@@ -11,12 +12,12 @@ export default function FaginnholdParentPage() {
   };
 
   return (
-    <>
-      <p className="text-center mb-6">
+    <Page title="Faginnhold">
+      <p className="text-center mb-10">
         Her får du en oversikt over hva du kan lære i de ulike seksjonene. Klikk
         deg videre for eksempler og forklaringer.
       </p>
-      <section className="grid gap-6 md:grid-cols-2 max-w-4xl mx-auto p-6 space-y-8">
+      <section className="grid gap-6 md:grid-cols-2 space-y-8">
         {faginnholdChildren.map((emne) => (
           <FaginnholdCard
             key={emne.href}
@@ -27,6 +28,6 @@ export default function FaginnholdParentPage() {
           />
         ))}
       </section>
-    </>
+    </Page>
   );
 }

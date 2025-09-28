@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import Link from "next/link";
-import { navLinks } from "./components/NavLinks";
+import { HeaderNav, FaginnholdSubNav } from "./components/NavLinks";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -33,20 +32,11 @@ export default function RootLayout({
           <h1 className="text-accent text-center text-4xl font-semibold py-2">
             The Wizard of Web
           </h1>
-          <nav className="flex justify-center gap-8 text-light text-l py-4">
-            {navLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className="cursor-pointer hover:text-accent transition-transform duration-200 hover:scale-110"
-              >
-                {link.label}
-              </Link>
-            ))}
-          </nav>
+          <HeaderNav />
+          <FaginnholdSubNav />
         </header>
         {children}
-        <footer className="text-center text-dark text-sm mt-10">
+        <footer className="text-center text-gray-500 text-sm mt-10">
           <p>© 2025 The Wizard of Web</p>
           <p>Design og innhold av Colleen, Roman, og Luna</p>
         </footer>
