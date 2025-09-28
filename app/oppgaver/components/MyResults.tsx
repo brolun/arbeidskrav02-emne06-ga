@@ -34,7 +34,7 @@ export function MyResults({ resetQuiz }: RetakeTestProps) {
           {percentage >= 80 ? "Bestått" : "Ikke bestått"}
         </span>
       </h3>
-      <p className="text-center mb-6">{passMessage}</p>
+      <div className="text-center mb-6">{passMessage}</div>
 
       {myQuestions.map((question) => (
         <QuestionCard
