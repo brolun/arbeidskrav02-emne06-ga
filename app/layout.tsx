@@ -45,9 +45,7 @@ export default function RootLayout({
             ))}
           </nav>
         </header>
-        <main className="px-4 md:px-8 py-8 mx-auto max-w-5xl w-full">
-          {children}
-        </main>
+        {children}
         <footer className="text-center text-dark text-sm mt-10">
           <p>© 2025 The Wizard of Web</p>
           <p>Design og innhold av Colleen, Roman, og Luna</p>

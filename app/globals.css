@@ -9,50 +9,24 @@
 .bg-light {
   background: var(--primary);
 }
-.text-light {
-  color: var(--primary);
-}
 .bg-dark {
   background: var(--secondary);
-}
-.text-dark {
-  color: var(--secondary);
-}
-.border-dark {
-  border-color: var(--secondary);
 }
 .bg-accent {
   background: var(--accent);
 }
+.text-light {
+  color: var(--primary);
+}
+.text-dark {
+  color: var(--secondary);
+}
 .text-accent {
   color: var(--accent);
 }
+.border-dark {
+  border-color: var(--secondary);
+}
 .hover\:text-accent:hover {
   color: var(--accent);
-}
-
-h2 {
-  @apply text-3xl font-semibold mb-8 mt-4;
-}
-h3 {
-  @apply text-2xl font-semibold;
-}
-
-.card {
-  @apply p-4 rounded-lg space-y-4;
-  background: var(--secondary);
-  color: var(--primary);
-}
-
-.code-info {
-  @apply space-y-4 mb-7;
-}
-.code-example {
-  @apply space-y-7;
-}
-
-pre {
-  @apply p-4 rounded-lg text-sm whitespace-pre-wrap break-words font-mono;
-  background: var(--secondary);
-  color: var(--primary);
 }
