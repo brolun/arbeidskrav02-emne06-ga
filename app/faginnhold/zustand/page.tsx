@@ -1,30 +1,16 @@
-"use client";
-import { create } from "zustand";
+export const metadata = {
+  title: "The Wizard of Web | Zustand",
+};
+
 import { Page } from "@/app/components/Page";
 import {
   FaginnholdChildLayout,
   CodeSnippet,
   CodeResult,
 } from "../components/FaginnholdChildLayout";
+import ZustandExampleClient from "../components/ZustandExampleClient";
 
-type CounterState = {
-  count: number;
-  inc: () => void;
-  dec: () => void;
-  reset: () => void;
-};
-
-const useCounterStore = create<CounterState>((set) => ({
-  count: 0,
-  inc: () => set((s) => ({ count: s.count + 1 })),
-  dec: () => set((s) => ({ count: Math.max(0, s.count - 1) })),
-  reset: () => set({ count: 0 }),
-}));
-
-export default function ZustandPage() {
-  const { count, inc, dec, reset } = useCounterStore();
-
-  const snippet = `type CounterState = {
+const snippet = `type CounterState = {
   count: number;
   inc: () => void;
   dec: () => void;
@@ -38,6 +24,7 @@ const useCounterStore = create<CounterState>((set) => ({
   reset: () => set({ count: 0 }),
 }));`;
 
+export default function ZustandPage() {
   return (
     <Page title="Zustand">
       <FaginnholdChildLayout
@@ -76,27 +63,7 @@ const useCounterStore = create<CounterState>((set) => ({
           <>
             <CodeSnippet title="Kode (utdrag)">{snippet}</CodeSnippet>
             <CodeResult title="Resultat">
-              <p className="mb-2">Nåværende verdi: {count}</p>
-              <div className="space-x-2 mt-5">
-                <button
-                  onClick={dec}
-                  className="px-3 py-1 bg-red-600 hover:bg-red-500 text-white rounded"
-                >
-                  -1
-                </button>
-                <button
-                  onClick={inc}
-                  className="px-3 py-1 bg-green-600 hover:bg-green-500 text-white rounded"
-                >
-                  +1
-                </button>
-                <button
-                  onClick={reset}
-                  className="px-3 py-1 bg-gray-600 hover:bg-gray-500 text-white rounded"
-                >
-                  Nullstill
-                </button>
-              </div>
+              <ZustandExampleClient />
             </CodeResult>
           </>
         }

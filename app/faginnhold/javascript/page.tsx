@@ -1,32 +1,24 @@
-"use client";
-import { Button } from "@/app/components/Button";
-import { useState } from "react";
+export const metadata = {
+  title: "The Wizard of Web | JavaScript",
+};
+
 import { Page } from "@/app/components/Page";
-import {
-  FaginnholdChildLayout,
-  CodeSnippet,
-  CodeResult,
-} from "../components/FaginnholdChildLayout";
+import { FaginnholdChildLayout } from "../components/FaginnholdChildLayout";
+import JavascriptExampleClient from "../components/JavascriptExampleClient";
 
-export default function JavascriptPage() {
-  const numbers = [1, 2, 3, 4, 5];
-  const doubled = numbers.map((n) => n * 2);
-  const sum = numbers.reduce((acc, n) => acc + n, 0);
-
-  const [clicks, setClicks] = useState(0);
-
-  const snippet1 = `const numbers = [1, 2, 3, 4, 5];
+const snippet1 = `const numbers = [1, 2, 3, 4, 5];
 
 const doubled = numbers.map(n => n * 2); // [2, 4, 6, 8, 10]
 const sum = numbers.reduce((acc, n) => acc + n, 0); // 15`;
 
-  const snippet2 = `let count = 0;
+const snippet2 = `let count = 0;
 
 function handleClick() {
   count++;
   console.log("Du har klikket " + count + " ganger");
 }`;
 
+export default function JavascriptPage() {
   return (
     <Page title="JavaScript">
       <FaginnholdChildLayout
@@ -53,28 +45,7 @@ function handleClick() {
           </>
         }
         example={
-          <>
-            <CodeSnippet title="Kode (eksempel 1: lister)">
-              {snippet1}
-            </CodeSnippet>
-            <CodeResult title="Resultat">
-              <p>Opprinnelige tall: {numbers.join(", ")}</p>
-              <p>Doblede tall: {doubled.join(", ")}</p>
-              <p>Summen av tallene: {sum}</p>
-            </CodeResult>
-            <CodeSnippet title="Kode (eksempel 2: klikk-teller)">
-              {snippet2}
-            </CodeSnippet>
-            <CodeResult title="Resultat">
-              <p>Antall klikk: {clicks}</p>
-              <Button
-                onClick={() => setClicks((c) => c + 1)}
-                className="self-start"
-              >
-                Klikk meg
-              </Button>
-            </CodeResult>
-          </>
+          <JavascriptExampleClient snippet1={snippet1} snippet2={snippet2} />
         }
       />
     </Page>

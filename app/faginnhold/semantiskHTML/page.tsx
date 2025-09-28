@@ -1,4 +1,7 @@
-"use client";
+export const metadata = {
+  title: "The Wizard of Web | Semantisk HTML",
+};
+
 import { Page } from "@/app/components/Page";
 import {
   FaginnholdChildLayout,
