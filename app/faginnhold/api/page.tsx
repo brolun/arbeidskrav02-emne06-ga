@@ -95,7 +95,7 @@ async function hentHpKarakterer() {
                 </ul>
               ) : (
                 !loading && (
-                  <p className="text-gray-300">Ingen data hentet ennå.</p>
+                  <p className="text-gray-500">Ingen data hentet ennå.</p>
                 )
               )}
             </CodeResult>

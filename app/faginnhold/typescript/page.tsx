@@ -100,7 +100,7 @@ const admins = users.filter(u => u.role === "admin"); // type-sjekket ved byggin
                   );
                 })}
               </ul>
-              <p className="text-gray-300 text-sm mt-6">
+              <p className="text-gray-500 text-sm mt-6">
                 Merk: TypeScript-feil fanges under utvikling – i nettleseren
                 kjører ren JavaScript.
               </p>

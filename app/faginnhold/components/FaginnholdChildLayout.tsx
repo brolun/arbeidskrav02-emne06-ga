@@ -12,7 +12,7 @@ export function FaginnholdChildLayout({
 }: FaginnholdChildLayoutProps) {
   const [showExample, setShowExample] = useState(false);
   return (
-    <section>
+    <section className="pb-8 mb-10">
       <div className="space-y-4 mb-7">{description}</div>
       <Button
         onClick={() => setShowExample((v) => !v)}
@@ -25,6 +25,10 @@ export function FaginnholdChildLayout({
   );
 }
 
+function SectionTitle({ children }: { children: React.ReactNode }) {
+  return <h3 className="text-2xl font-semibold mb-3">{children}</h3>;
+}
+
 export function CodeSnippet({
   title = "Kode",
   children,
@@ -34,7 +38,7 @@ export function CodeSnippet({
 }) {
   return (
     <div>
-      <h3 className="text-2xl font-semibold">{title}</h3>
+      <SectionTitle>{title}</SectionTitle>
       <pre className="text-light p-5 rounded-lg text-sm whitespace-pre-wrap break-words font-mono bg-dark space-y-4 shadow hover:shadow-lg transition flex flex-col justify-between h-full overflow-x-auto">
         {children}
       </pre>
@@ -50,8 +54,8 @@ export function CodeResult({
   children: ReactNode;
 }) {
   return (
-    <div>
-      <h3 className="text-2xl font-semibold">{title}</h3>
+    <div className="space-y-2">
+      <SectionTitle>{title}</SectionTitle>
       {children}
     </div>
   );
