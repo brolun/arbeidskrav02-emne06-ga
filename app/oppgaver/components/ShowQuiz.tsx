@@ -1,9 +1,9 @@
 "use client";
-import { Button } from "@/app/components/Button";
 import { MyResults } from "../components/MyResults";
 import { useQuizStore } from "@/app/store/store";
 import { useState, useEffect } from "react";
 import { QuestionCard } from "./QuestionCard";
+import { QuizActionButton } from "./QuizActionButton";
 
 export function ShowQuiz() {
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -38,14 +38,13 @@ export function ShowQuiz() {
           setAnswer={setAnswer}
         />
       ))}
-      <Button
+      <QuizActionButton
+        label="Sjekk svarene dine"
         onClick={() => {
           setIsSubmitted(true);
           window.scrollTo(0, 0);
         }}
-      >
-        Sjekk svarene dine
-      </Button>
+      />
     </>
   );
 }
