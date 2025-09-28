@@ -1,7 +1,11 @@
 "use client";
-
-import { Button } from "@/app/components/Button";
-import { useMemo, useState } from "react";
+import { useMemo } from "react";
+import { Page } from "@/app/components/Page";
+import {
+  FaginnholdChildLayout,
+  CodeSnippet,
+  CodeResult,
+} from "../components/FaginnholdChildLayout";
 
 type User = { id: number; name: string; role?: "admin" | "editor" | "viewer" };
 
@@ -14,9 +18,7 @@ function pickBy<T extends object, K extends keyof T>(
   return out;
 }
 
-export default function Page() {
-  const [showExample, setShowExample] = useState(false);
-
+export default function TypescriptPage() {
   const users: User[] = useMemo(
     () => [
       { id: 1, name: "Vegard", role: "admin" },
@@ -49,52 +51,44 @@ const users: User[] = [
 const admins = users.filter(u => u.role === "admin"); // type-sjekket ved bygging`;
 
   return (
-    <>
-      <section className="code-info">
-        <h2>TypeScript</h2>
-        <p>
-          <strong>TypeScript</strong> er JavaScript med <strong>typer</strong>.
-          Typene hjelper deg å oppdage feil mens du koder (før siden kjøres), og
-          gjør koden mer forutsigbar og lett å vedlikeholde.
-        </p>
-        <ul className="list-disc list-inside">
-          <li>
-            <strong>Typer for objekter</strong> - f.eks. <code>User</code> med{" "}
-            <code>id</code>, <code>name</code> og valgfri <code>role</code>.
-          </li>
-          <li>
-            <strong>Union-typer</strong> - avgrenser verdier (f.eks.{" "}
-            <code>
-              &quot;admin&quot; | &quot;editor&quot; | &quot;viewer&quot;
-            </code>
-            ).
-          </li>
-          <li>
-            <strong>Generics</strong> - gjenbrukbare funksjoner med
-            typesikkerhet (f.eks. <code>pickBy&lt;T, K&gt;</code>).
-          </li>
-          <li>
-            <strong>Type-sjekk</strong> skjer under utvikling/bygging - i
-            runtime oppfører alt seg som vanlig JS.
-          </li>
-        </ul>
-      </section>
-
-      <section className="code-example">
-        <Button
-          onClick={() => setShowExample((v) => !v)}
-          aria-expanded={showExample}
-        >
-          {showExample ? "Skjul eksempel" : "Eksempel"}
-        </Button>
-
-        {showExample && (
+    <Page title="TypeScript">
+      <FaginnholdChildLayout
+        description={
           <>
-            <h3>Kode (utdrag)</h3>
-            <pre>{snippet}</pre>
-
-            <h3>Resultat</h3>
-            <div className="card">
+            <p>
+              <strong>TypeScript</strong> er JavaScript med{" "}
+              <strong>typer</strong>. Typene hjelper deg å oppdage feil mens du
+              koder (før siden kjøres), og gjør koden mer forutsigbar og lett å
+              vedlikeholde.
+            </p>
+            <ul className="list-disc list-inside">
+              <li>
+                <strong>Typer for objekter</strong> - f.eks. <code>User</code>{" "}
+                med <code>id</code>, <code>name</code> og valgfri{" "}
+                <code>role</code>.
+              </li>
+              <li>
+                <strong>Union-typer</strong> - avgrenser verdier (f.eks.{" "}
+                <code>
+                  &quot;admin&quot; | &quot;editor&quot; | &quot;viewer&quot;
+                </code>
+                ).
+              </li>
+              <li>
+                <strong>Generics</strong> - gjenbrukbare funksjoner med
+                typesikkerhet (f.eks. <code>pickBy&lt;T, K&gt;</code>).
+              </li>
+              <li>
+                <strong>Type-sjekk</strong> skjer under utvikling/bygging - i
+                runtime oppfører alt seg som vanlig JS.
+              </li>
+            </ul>
+          </>
+        }
+        example={
+          <>
+            <CodeSnippet title="Kode (utdrag)">{snippet}</CodeSnippet>
+            <CodeResult title="Resultat">
               <p>Antall administratorer: {admins.length}</p>
               <ul className="list-disc list-inside">
                 {users.map((u) => {
@@ -110,10 +104,10 @@ const admins = users.filter(u => u.role === "admin"); // type-sjekket ved byggin
                 Merk: TypeScript-feil fanges under utvikling – i nettleseren
                 kjører ren JavaScript.
               </p>
-            </div>
+            </CodeResult>
           </>
-        )}
-      </section>
-    </>
+        }
+      />
+    </Page>
   );
 }

@@ -3,7 +3,7 @@ import { faginnholdChildren } from "../components/FaginnholdChildren";
 import { useRouter } from "next/navigation";
 import { FaginnholdCard } from "./components/FaginnholdCard";
 
-export default function Page() {
+export default function FaginnholdParentPage() {
   const router = useRouter();
 
   const handleButtonClick = (href: string) => {

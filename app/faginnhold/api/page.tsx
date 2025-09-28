@@ -1,7 +1,12 @@
 "use client";
-
 import { Button } from "@/app/components/Button";
 import { useState } from "react";
+import { Page } from "@/app/components/Page";
+import {
+  FaginnholdChildLayout,
+  CodeSnippet,
+  CodeResult,
+} from "../components/FaginnholdChildLayout";
 
 type HpChar = {
   name: string;
@@ -10,8 +15,7 @@ type HpChar = {
   image?: string;
 };
 
-export default function Page() {
-  const [showExample, setShowExample] = useState(false);
+export default function ApiPage() {
   const [items, setItems] = useState<HpChar[]>([]);
   const [loading, setLoading] = useState(false);
 
@@ -50,47 +54,36 @@ async function hentHpKarakterer() {
   }
 
   return (
-    <>
-      <section className="code-info">
-        <h2>API</h2>
-        <p>
-          Et <strong>API (Application Programming Interface)</strong> er et{" "}
-          <strong>grensesnitt</strong> som gjør at to programmer eller systemer
-          kan <strong>snakke sammen</strong>.
-        </p>
-        <p>
-          Det brukes for å <strong>hente</strong> informasjon (for eksempel en
-          liste med data) eller <strong>sende</strong> informasjon (for eksempel
-          et nytt innlegg i en database).
-        </p>
-        <p>
-          I nettleseren brukes ofte <code>fetch</code> for å hente eller sende
-          data til et
-          <strong> REST-API</strong>. På den måten kan en webside vise oppdatert
-          innhold fra en ekstern tjeneste – som i eksempelet vårt med{" "}
-          <strong>Harry Potter-karakterer</strong>.
-        </p>
-      </section>
-
-      <section className="code-example">
-        <Button
-          onClick={() => setShowExample((v) => !v)}
-          aria-expanded={showExample}
-        >
-          {showExample ? "Skjul eksempel" : "Eksempel"}
-        </Button>
-
-        {showExample && (
+    <Page title="API">
+      <FaginnholdChildLayout
+        description={
           <>
-            <h3>Kode (eksempel)</h3>
-            <pre>{snippet}</pre>
-
-            <h3>Resultat</h3>
-            <div className="card">
+            <p>
+              Et <strong>API (Application Programming Interface)</strong> er et{" "}
+              <strong>grensesnitt</strong> som gjør at to programmer eller
+              systemer kan <strong>snakke sammen</strong>.
+            </p>
+            <p>
+              Det brukes for å <strong>hente</strong> informasjon (for eksempel
+              en liste med data) eller <strong>sende</strong> informasjon (for
+              eksempel et nytt innlegg i en database).
+            </p>
+            <p>
+              I nettleseren brukes ofte <code>fetch</code> for å hente eller
+              sende data til et
+              <strong> REST-API</strong>. På den måten kan en webside vise
+              oppdatert innhold fra en ekstern tjeneste – som i eksempelet vårt
+              med <strong>Harry Potter-karakterer</strong>.
+            </p>
+          </>
+        }
+        example={
+          <>
+            <CodeSnippet title="Kode (eksempel)">{snippet}</CodeSnippet>
+            <CodeResult title="Resultat">
               <Button onClick={hentHpKarakterer} disabled={loading}>
                 {loading ? "Laster..." : "Hent 5 karakterer"}
               </Button>
-
               {items.length > 0 ? (
                 <ul className="list-disc list-inside space-y-1">
                   {items.map((it, idx) => (
@@ -105,10 +98,10 @@ async function hentHpKarakterer() {
                   <p className="text-gray-300">Ingen data hentet ennå.</p>
                 )
               )}
-            </div>
+            </CodeResult>
           </>
-        )}
-      </section>
-    </>
+        }
+      />
+    </Page>
   );
 }
