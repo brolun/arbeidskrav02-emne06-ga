@@ -1,9 +1,9 @@
 "use client";
-
 import { Button } from "@/app/components/Button";
 import { MyResults } from "../components/MyResults";
 import { useQuizStore } from "@/app/store/store";
 import { useState, useEffect } from "react";
+import { QuestionCard } from "./QuestionCard";
 
 export function ShowQuiz() {
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -29,31 +29,14 @@ export function ShowQuiz() {
   return isSubmitted ? (
     <MyResults resetQuiz={resetQuiz} />
   ) : (
-    <main>
+    <>
       {myQuestions.map((question) => (
-        <article key={question.id}>
-          <h3>Spørsmål {question.id}:</h3>
-          <h4>{question.question}</h4>
-
-          {question.options.map((option) => (
-            <ul key={option.optionId}>
-              <li>
-                {option.letter}. {option.answer}
-              </li>
-            </ul>
-          ))}
-
-          <select
-            value={UserAnswers[question.id] || ""}
-            //(evt) lager en funkjson som tar imot eventet
-            onChange={(evt) => setAnswer(question.id, evt.target.value)}
-          >
-            <option value="A">A</option>
-            <option value="B">B</option>
-            <option value="C">C</option>
-            <option value="D">D</option>
-          </select>
-        </article>
+        <QuestionCard
+          key={question.id}
+          question={question}
+          value={UserAnswers[question.id] || ""}
+          setAnswer={setAnswer}
+        />
       ))}
       <Button
         onClick={() => {
@@ -63,6 +46,6 @@ export function ShowQuiz() {
       >
         Sjekk svarene dine
       </Button>
-    </main>
+    </>
   );
 }
