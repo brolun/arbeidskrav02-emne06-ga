@@ -4,7 +4,7 @@ export const metadata = {
   title: "The Wizard of Web | Oppgaver",
 };
 
-export function Quiz() {
+export default function Quiz() {
   return (
     <>
       <form>
