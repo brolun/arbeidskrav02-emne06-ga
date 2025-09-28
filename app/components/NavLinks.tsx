@@ -1,7 +1,6 @@
 "use client";
 import Link from "next/link";
 import { faginnholdChildren } from "./FaginnholdChildren";
-import { usePathname } from "next/navigation";
 
 export function HeaderNav() {
   const baseClass =

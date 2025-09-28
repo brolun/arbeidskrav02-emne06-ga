@@ -10,7 +10,7 @@ type Question = {
   id: number;
   question: string;
   options: Option[];
-  correctAnswer?: string; // optional for results
+  correctAnswer?: string;
 };
 
 type QuestionCardProps = {
