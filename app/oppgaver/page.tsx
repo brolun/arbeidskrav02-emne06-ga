@@ -1,4 +1,5 @@
 import { ShowQuiz } from "./components/ShowQuiz";
+import { Page } from "../components/Page";
 
 export const metadata = {
   title: "The Wizard of Web | Oppgaver",
@@ -6,10 +7,10 @@ export const metadata = {
 
 export default function Quiz() {
   return (
-    <>
-      <form>
+    <Page title="Oppgaver">
+      <form className="max-w-xl mx-auto">
         <ShowQuiz />
       </form>
-    </>
+    </Page>
   );
 }

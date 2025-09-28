@@ -27,7 +27,7 @@ export default function RootLayout({
   return (
     <html lang="nb">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} bg-light antialiased min-h-screen grid grid-rows-[auto_1fr_auto]`}
+        className={`${geistSans.variable} ${geistMono.variable} bg-light text-dark antialiased min-h-screen grid grid-rows-[auto_1fr_auto]`}
       >
         <header className="bg-dark shadow-md">
           <h1 className="text-accent text-center text-4xl font-semibold py-2">

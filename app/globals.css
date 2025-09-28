@@ -27,6 +27,9 @@
 .border-dark {
   border-color: var(--secondary);
 }
+.border-accent {
+  border-color: var(--accent);
+}
 .hover\:text-accent:hover {
   color: var(--accent);
 }
