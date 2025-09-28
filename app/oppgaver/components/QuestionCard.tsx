@@ -36,10 +36,17 @@ export function QuestionCard({
       ? "border-green-600"
       : "border-red-600"
     : "border-accent";
+  const isAccent = borderColor === "border-accent";
 
   return (
-    <fieldset className={`my-12 p-4 rounded border ${borderColor}`}>
-      <legend className={`border ${borderColor} rounded px-4 py-2`}>
+    <fieldset
+      className={`my-12 p-4 rounded border ${borderColor}`}
+      style={isAccent ? { borderColor: "var(--accent)" } : {}}
+    >
+      <legend
+        className={`border ${borderColor} rounded px-4 py-2`}
+        style={isAccent ? { borderColor: "var(--accent)" } : {}}
+      >
         <span className="text-gray-500 font-mono mr-2">
           Spørsmål {question.id}:
         </span>
