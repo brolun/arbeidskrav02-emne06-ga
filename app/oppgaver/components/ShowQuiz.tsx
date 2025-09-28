@@ -30,6 +30,10 @@ export function ShowQuiz() {
     <MyResults resetQuiz={resetQuiz} />
   ) : (
     <>
+      <section className="text-center">
+        <p>Svar på oppgavene under og sjekk hvor mye du har lært.</p>
+        <p>Du må ha minst 80% riktig for å bestå kurset. Lykke til!</p>
+      </section>
       {myQuestions.map((question) => (
         <QuestionCard
           key={question.id}
